@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/san2025chez.github.io/porfolio/static/css/main.f4dc68ec.css",
+    "main.js": "/san2025chez.github.io/porfolio/static/js/main.40eb4514.js",
+    "static/js/787.09cff76b.chunk.js": "/san2025chez.github.io/porfolio/static/js/787.09cff76b.chunk.js",
+    "static/media/react.jpg": "/san2025chez.github.io/porfolio/static/media/react.49237e6a19cd2a1c1ea9.jpg",
+    "static/media/any.jpg": "/san2025chez.github.io/porfolio/static/media/any.e32c6bbed744b2f3b1e0.jpg",
+    "static/media/cv.pdf": "/san2025chez.github.io/porfolio/static/media/cv.342a59bf25bef4784d05.pdf",
+    "static/media/express.jpg": "/san2025chez.github.io/porfolio/static/media/express.7a230947d02fe7881689.jpg",
+    "static/media/pg.png": "/san2025chez.github.io/porfolio/static/media/pg.66ee139736a1f78e26e4.png",
+    "static/media/nest.png": "/san2025chez.github.io/porfolio/static/media/nest.bb2309aa5330f047b7b3.png",
+    "static/media/prestamo.png": "/san2025chez.github.io/porfolio/static/media/prestamo.960dc03c28fd0926f672.png",
+    "static/media/postgres.png": "/san2025chez.github.io/porfolio/static/media/postgres.2e675658cedda3e07b93.png",
+    "static/media/git.png": "/san2025chez.github.io/porfolio/static/media/git.a8c0129400f5b3bf708d.png",
+    "index.html": "/san2025chez.github.io/porfolio/index.html",
+    "main.f4dc68ec.css.map": "/san2025chez.github.io/porfolio/static/css/main.f4dc68ec.css.map",
+    "main.40eb4514.js.map": "/san2025chez.github.io/porfolio/static/js/main.40eb4514.js.map",
+    "787.09cff76b.chunk.js.map": "/san2025chez.github.io/porfolio/static/js/787.09cff76b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4dc68ec.css",
+    "static/js/main.40eb4514.js"
+  ]
+}

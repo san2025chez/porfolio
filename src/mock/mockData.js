@@ -1,20 +1,22 @@
 import prestamo from "../img/prestamo.png";
-import javascript from "../img/javascript.png"
+import ecomerce from "../img/ecomerce.jpeg"
+import dash from "../img/dash.jpeg"
+import personales from "../img/personales.jpeg"
 const mockData=[
     {
         title: "Prestamos Personales",
-        image: prestamo ,
-        link:"https://www.youtube.com/watch?v=-7UnSA3w7hU"
+        image: personales ,
+        link:"https://prestamosperico.com.ar/"
+    },
+    {
+        title: "E-commerce",
+        image: ecomerce ,
+        link:"https://youtu.be/nHjELSA0AVk"
     },
     {
         title: "Prestamos Personales",
-        image: javascript ,
-        link:"https://www.youtube.com/watch?v=-7UnSA3w7hU"
-    },
-    {
-        title: "Prestamos Personales",
-        image: prestamo ,
-        link:"https://www.youtube.com/watch?v=-7UnSA3w7hU"
+        image: dash,
+        link:"https://youtu.be/sEvaTir8z_Y"
     },
     {
         title: "Prestamos Personales",

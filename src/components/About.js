@@ -35,7 +35,7 @@ const About = ({title, dark, id}) => {
           </CardActions>
         </Card>
       </div>
-        About º
+
         </div>
   )
 }
@@ -58,13 +58,21 @@ const useStyles = makeStyles((theme) => ({
      height: "70vh",
      display:"flex",
      marginTop: theme.spacing(6),
-     position: "relative"
+     position: "relative",
+     [theme.breakpoints.down('sm')]: {
+      maxWidth: 400,
+      maxHeight:400
+    },
         },
         media:{
           width: "250px",
           objectFit:"cover",
           height: "auto",
-          borderRadius:"10px"
+          borderRadius:"10px",
+          [theme.breakpoints.down('sm')]: {
+            maxWidth: 400,
+            maxHeight:400
+          }
         },
         pdfbutton:{
           position:"absolute",

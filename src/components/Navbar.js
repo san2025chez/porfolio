@@ -27,12 +27,12 @@ const links =[
     },
     {
         id:"work",
-        text: "Skill",
+        text: "Work",
         icon: <BuildTwoToneIcon fontSize="large"/>
     },
     {
         id:"contact",
-        text: "Get in touch",
+        text: "Contacs",
         icon: <ContactMailTwoToneIcon fontSize="large"/>
     },
     
@@ -101,7 +101,7 @@ const Navbar = () => {
 }
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: "#122d59",
+        backgroundColor: "#1e2150",
         top: 0,
         left: 0,
         right: 0,
@@ -134,8 +134,8 @@ menu:{
     },
     "& a:hover":{
         cursor: "pointer",
-        color:"tomato",
-        borderBottom: "3px solid tomato",
+        color:"#9297b3",
+        borderBottom: "3px solid #252a5c",
     }
 
 },
@@ -143,14 +143,14 @@ menubutton:{
     display: "none",
     [theme.breakpoints.down("sm")]:{
         display: "block",
-        color: "tomato",
+        color: "#9297b3",
         position: "absolute",
         top: 0,
         right:10,
     }
 },
 cancelicon:{
-    color: "tomato",
+    color: "#9297b3",
     position: "absolute",
     top: 0,
     right: 10
@@ -167,7 +167,7 @@ sidebar:{
         fontWeight: "bold"
     },
 "& h5:hover":{
-    color: "tomato",
+    color: "#9297b3",
     cursor:"pointer"
 }}
     

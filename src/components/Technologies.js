@@ -68,7 +68,7 @@ import express from '../img/express.jpg'
 import nest from '../img/nest.png'
 
 const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    backgroundColor: theme.palette.mode === '#607d8b' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
     padding: theme.spacing(2),
     textAlign: 'center',
@@ -79,25 +79,25 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Technologies() {
     const classes = useStyles();
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1 }} className={classes.box1}>
             <Grid container spacing={2}>
 
 
-                <Grid item xs={12} sm={6} md={3} >
+                <Grid item xs={6} sm={6} md={2} >
                  
                         <Card className={classes.card}>
                             <CardMedia image={node} alt={"title"} className={classes.image} />
                         </Card>
                   
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={6} sm={6} md={2}>
                    
                         <Card className={classes.card}>
                             <CardMedia image={css} alt={"title"} className={classes.image} />
                         </Card>
                    
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={6} sm={6} md={2}>
                 
                 <Card className={classes.card}>
                     <CardMedia image={javascript} alt={"title"} className={classes.image} />
@@ -105,21 +105,21 @@ export default function Technologies() {
           
                 </Grid>
 
-                <Grid item xs={12} sm={6} md={3} >
+                <Grid item xs={6} sm={6} md={2} >
                  
                         <Card className={classes.card}>
                             <CardMedia image={mongo} alt={"title"} className={classes.image} />
                         </Card>
                   
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={6} sm={6} md={2}>
                    
                         <Card className={classes.card}>
                             <CardMedia image={mysql} alt={"title"} className={classes.image} />
                         </Card>
                    
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={6} sm={6} md={2}>
                 
                 <Card className={classes.card}>
                     <CardMedia image={html} alt={"title"} className={classes.image} />
@@ -127,7 +127,7 @@ export default function Technologies() {
           
           
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={6} sm={6} md={2}>
                 
                 <Card className={classes.card}>
                     <CardMedia image={react} alt={"title"} className={classes.image} />
@@ -135,7 +135,7 @@ export default function Technologies() {
           
           
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={6} sm={6} md={2}>
                 
                 <Card className={classes.card}>
                     <CardMedia image={git} alt={"title"} className={classes.image} />
@@ -143,7 +143,7 @@ export default function Technologies() {
           
           
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={6} sm={6} md={2}>
                 
                 <Card className={classes.card}>
                     <CardMedia image={ts} alt={"title"} className={classes.image} />
@@ -152,7 +152,7 @@ export default function Technologies() {
           
                 </Grid>
 
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={6} sm={6} md={2}>
                 
                 <Card className={classes.card}>
                     <CardMedia image={pg} alt={"title"} className={classes.image} />
@@ -160,7 +160,7 @@ export default function Technologies() {
           
           
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={6} sm={6} md={2}>
                 
                 <Card className={classes.card}>
                     <CardMedia image={express} alt={"title"} className={classes.image} />
@@ -169,7 +169,7 @@ export default function Technologies() {
           
                 </Grid>
 
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={6} sm={6} md={2}>
                 
                 <Card className={classes.card}>
                     <CardMedia image={nest} alt={"title"} className={classes.image} />
@@ -213,6 +213,9 @@ export default function Technologies() {
 const useStyles = makeStyles((theme) => ({
   milogo:{
     height: '200px'
+  },
+  box1:{
+    backgroundColor:"white"
   },
   card:{ width: '100px', height: '100px' },
 image:{

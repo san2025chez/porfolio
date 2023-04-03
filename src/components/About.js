@@ -11,18 +11,19 @@ const About = ({title, dark, id}) => {
   return (
     <div className={`${classes.section} ${dark && classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
-        <Typography variant="h3">{title}</Typography>
+        <Typography variant="h5">{title}</Typography>
         <Card className={classes.card}>
           <CardMedia  image={richisito} className={classes.media} title="picture"/>
 
           <CardContent className={classes.cardcontent}>
             <TypeWriteEffect
-            text="Hi , I am Vanesa Sanchez"
+            text="Hi , I am Vanesa Sanchez ,Full Stack-Developer"
             textStyle={{fontSize: "2rem", fontWeight: "700px"}}
             startDelay={100}
             cursorColor="black"
             typeSpeed={100}
             />
+
             contenido de la tarjeta
             <Typography/>
           </CardContent>
@@ -45,9 +46,12 @@ const useStyles = makeStyles((theme) => ({
 
         section:{
             minHeight:"100vh",
+            backgroundColor: "#252a5c",
+
         },
         sectiondark:{
-            background:" #333",
+            background: "#252a5c",
+        /*     "#607d8b", */
             color:"#fff"
         },
         sectioncontent:{
@@ -60,18 +64,18 @@ const useStyles = makeStyles((theme) => ({
      marginTop: theme.spacing(6),
      position: "relative",
      [theme.breakpoints.down('sm')]: {
-      maxWidth: 400,
-      maxHeight:400
+      maxWidth: 600,
+      maxHeight:600
     },
         },
         media:{
-          width: "250px",
+          width: "350px",
           objectFit:"cover",
           height: "auto",
           borderRadius:"10px",
           [theme.breakpoints.down('sm')]: {
             maxWidth: 400,
-            maxHeight:400
+            maxHeight:500
           }
         },
         pdfbutton:{
@@ -82,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
 bottom:"2rem",
 right: "1rem"
           },
-          backgroundColor: "tomato",
+          backgroundColor: "#252a5c",
           padding: theme.spacing(3),
           "&: hover": {
             backgroundColor:"#fff"

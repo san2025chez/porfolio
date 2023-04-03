@@ -9,7 +9,7 @@ const MyWork = ({ title, dark, id }) => {
   return (
     <div className={`${classes.section} ${dark && classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
-        <Typography variant="h3">{title}</Typography>
+        <Typography variant="h5">{title}</Typography>
         <Grid container className={classes.grid}>
           {
             mockData.map(({ title, image, link }, index) => (
@@ -34,10 +34,10 @@ const MyWork = ({ title, dark, id }) => {
 const useStyles = makeStyles((theme) => ({
 
   section: {
-    minHeight: "100vh",
+    minHeight: "80vh",
   },
   sectiondark: {
-    background: "#3333",
+    background:"#252a5c",
     color: "#fff"
   },
 

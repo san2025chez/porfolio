@@ -17,7 +17,7 @@ function App() {
       <About title="About Me" id="about" dark={true} />
       <Skills title="My Skills" id="skill" dark={false}/>
       <MyWork title="My Work" id="work" dark={true}/>
-      <Contact title="Contact" id="contact" dark={false}/>
+      <Contact title="Contact" id="contact" dark={true} />
     </div>
   );
 }

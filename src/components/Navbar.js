@@ -98,7 +98,7 @@ const Navbar = () => {
 }
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: "black",
+        backgroundColor: "#570e5d",
         top: 0,
         left: 0,
         right: 0,

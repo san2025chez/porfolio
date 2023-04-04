@@ -20,7 +20,7 @@ const Contact = ({title, dark, id}) => {
     <IconButton > <WhatsAppIcon fontSize="large" style={{color: '#00e676' ,fontSize:'3rem'}}/></IconButton>
       </a>
      <a href="https://www.linkedin.com/in/anamariavanesasanchez/" target="_blank" rel="noopener noreferrer"> <IconButton >
-     <LinkedInIcon  fontSize="large" style={{color: '#4615b2' ,fontSize:'3rem'}}/>
+     <LinkedInIcon  fontSize="large" style={{color: '#2e3181' ,fontSize:'3rem'}}/>
       </IconButton ></a>
    {/*    <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
       <IconButton >

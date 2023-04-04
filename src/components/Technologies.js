@@ -38,13 +38,14 @@ export default function Technologies() {
     return (
         <Box sx={{ flexGrow: 1 }} className={classes.box1}>
             
-          <Typography style={{fontSize:'25px', color:'white' , textAlign:'justify'}}>
+          <Typography style={{fontSize:'20px', color:'white' , textAlign:'justify'}}>
           Ingeniera Informática con experiencia laboral en desarrollo de
 proyecto software. Curiosa, creativa, y orientada a resultados.
 Siempre en busca de la mejora personal continua, mi objetivo es
 desempeñarme en el área de programación con el rol de
 desarrollador Back-End, con la finalidad de seguir creciendo y
-perfeccionarme como profesional.</Typography>
+perfeccionarme como profesional.Estoy abierto a oportunidades de trabajo donde pueda contribuir, aprender y crecer. Si tiene una buena oportunidad que coincida con mis habilidades
+ y experiencia, no dude en ponerse en contacto conmigo.</Typography>
 <br/><br/>
             <Grid container spacing={2}>
 

@@ -49,7 +49,7 @@ const About = ({title, dark, id}) => {
 const useStyles = makeStyles((theme) => ({
 
         section:{
-            minHeight:"100vh",
+            minHeight:"90vh",
             backgroundColor: "#263238",
 
         },

@@ -14,10 +14,10 @@ function App() {
     <div className={classes.root}>
 
       <Navbar></Navbar>
-      <About title="About Me" id="about" dark={true} />
-      <Skills title="My Skills" id="skill" dark={false}/>
-      <MyWork title="My Work" id="work" dark={true}/>
-      <Contact title="Contact" id="contact" dark={true} />
+      <About title="Inicio" id="about" dark={true} />
+      <Skills title="Sobre Mi" id="skill" dark={false}/>
+      <MyWork title="Trabajos" id="work" dark={true}/>
+      <Contact title="Contactos" id="contact" dark={true} />
     </div>
   );
 }

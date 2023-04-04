@@ -12,6 +12,7 @@ const Contact = ({title, dark, id}) => {
   return (
     <div className={`${classes.section} ${dark && classes.sectiondark}`}>
     <div className={classes.sectioncontent} id={id}>
+    <Typography variant="h5" style={{ textAlign: 'center' , fontWeight: 'bold' , color:'white', fontSize:'2rem'}}>{title}</Typography>
     <Grid container spacing={2} alignItems="center" className={classes.grid}>
     <Grid item>
    

@@ -9,7 +9,7 @@ const MyWork = ({ title, dark, id }) => {
   return (
     <div className={`${classes.section} ${dark && classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
-        <Typography variant="h5">{title}</Typography>
+        <Typography variant="h5" style={{ textAlign: 'center',fontWeight: 'bold' , color:'white', fontSize:'2rem'} }>{title}</Typography>
         <Grid container className={classes.grid}>
           {
             mockData.map(({ title, image, link }, index) => (

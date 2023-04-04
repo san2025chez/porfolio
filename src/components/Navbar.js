@@ -10,29 +10,25 @@ import ContactMailTwoToneIcon from "@mui/icons-material/ContactMailTwoTone";
 import MenuIcon from "@mui/icons-material/Menu"
 import CancelIcon from "@mui/icons-material/Cancel"
 const links =[
-    {
-        id:"home",
-        text: "Home",
-        icon: <InfoIcon fontSize="large"/>
-    },
+
     {
         id:"about",
-        text: "About Me",
+        text: "Inicio",
         icon: <InfoIcon fontSize="large"/>
     },
     {
         id:"skill",
-        text: "Skill",
+        text: "Acerca de Mi",
         icon: <EmojiObjectsIcon fontSize="large"/>
     },
     {
         id:"work",
-        text: "Work",
+        text: "Trabajos",
         icon: <BuildTwoToneIcon fontSize="large"/>
     },
     {
         id:"contact",
-        text: "Contacs",
+        text: "Contactos",
         icon: <ContactMailTwoToneIcon fontSize="large"/>
     },
     
@@ -101,7 +97,7 @@ const Navbar = () => {
 }
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: "#1e2150",
+        backgroundColor: "black",
         top: 0,
         left: 0,
         right: 0,

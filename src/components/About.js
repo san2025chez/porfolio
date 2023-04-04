@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, CardMedia, makeStyles, Typography,Card,CardContent, CardActions } from "@material-ui/core";
+import {Button, CardMedia, makeStyles,Typography,Card,CardContent, CardActions } from "@material-ui/core";
 import richisito from "../img/any.jpg"
 import TypeWriteEffect from "react-typewriter-effect"
 import Avatar from '@material-ui/core/Avatar';
@@ -12,21 +12,24 @@ const About = ({title, dark, id}) => {
   return (
     <div className={`${classes.section} ${dark && classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
-        <Typography variant="h5">{title}</Typography>
+ 
         <Card className={classes.card}>
 
 
           <CardContent className={classes.cardcontent}>
+  
             <TypeWriteEffect
-            text="Hi , I am Vanesa Sanchez ,Full Stack-Developer"
-            textStyle={{fontSize: "2rem", fontWeight: "700px", color:"white"}}
+            text="Hi , I am Vanesa Sanchez Full Stack-Developer"
+            textStyle={{fontSize: "4rem", fontWeight: "700px", color:"white"}}
             startDelay={100}
-            cursorColor="white"
+            
             typeSpeed={100}
             />
 
-            contenido de la tarjeta
-            <Typography/>
+
+
+       
+          
           </CardContent>
           <CardActions>
             <Button className={classes.pdfbutton} variant="contained">
@@ -57,7 +60,8 @@ const useStyles = makeStyles((theme) => ({
         },
         sectioncontent:{
           maxWidth: "80vw",
-          margin: "0 auto"
+          margin: "0 auto",
+   
         },
         rounded: {
           borderRadius: '100%',
@@ -65,15 +69,20 @@ const useStyles = makeStyles((theme) => ({
           height:'50%'
         },
         card:{
-     height: "50vh",
+     height: "80vh",
      backgroundColor:"#263238",
      display:"flex",
-     marginTop: theme.spacing(6),
+    
      position: "relative",
      [theme.breakpoints.down('sm')]: {
       maxWidth: 600,
       maxHeight:600
     },
+        },
+        cardcontent:{
+          display: 'flex', /* Convierte al contenedor en un contenedor flexible */
+          justifyContent: 'center', /* Centra el contenido horizontalmente */
+          alignItems: 'center',
         },
         media:{
           width: "350px",
@@ -87,7 +96,7 @@ const useStyles = makeStyles((theme) => ({
         },
         pdfbutton:{
           position:"absolute",
-          bottom: "5rem",
+          bottom: "1rem",
           right:"4rem",
           [theme.breakpoints.down("sm")]:{
 bottom:"2rem",

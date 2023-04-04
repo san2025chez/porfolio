@@ -12,7 +12,7 @@ const Skills = ({ title, dark, id }) => {
     <div className={`${classes.section} ${dark && classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
       <Typography variant="h5" style={{ textAlign: 'center' ,fontWeight: 'bold' , color:'white', fontSize:'2rem'}}>{title}</Typography>
-      <br/>
+      <br/> 
       
   
           
@@ -21,7 +21,7 @@ const Skills = ({ title, dark, id }) => {
                  
                
        
-            
+                 <br/>
  
       </div>
 

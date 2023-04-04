@@ -17,15 +17,15 @@ const Contact = ({title, dark, id}) => {
     <Grid item>
    
     <a href='https://api.whatsapp.com/send?phone=543884299868' target="_blank" rel="noopener noreferrer">
-    <IconButton > <WhatsAppIcon fontSize="large" style={{color: 'black' ,fontSize:'3rem'}}/></IconButton>
+    <IconButton > <WhatsAppIcon fontSize="large" style={{color: '#00e676' ,fontSize:'3rem'}}/></IconButton>
       </a>
      <a href="https://www.linkedin.com/in/anamariavanesasanchez/" target="_blank" rel="noopener noreferrer"> <IconButton >
-     <LinkedInIcon  fontSize="large" style={{color: 'black' ,fontSize:'3rem'}}/>
+     <LinkedInIcon  fontSize="large" style={{color: '#4615b2' ,fontSize:'3rem'}}/>
       </IconButton ></a>
-      <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
+   {/*    <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
       <IconButton >
        <EmailIcon  fontSize="large" style={{ color: 'black' ,fontSize:'3rem'}}/>
-      </IconButton></a>
+      </IconButton></a> */}
       <a  href="https://github.com/san2025chez" target="_blank" rel="noopener noreferrer">
       <IconButton   >
        <GitHubIcon  fontSize="large" style={{ color: 'black' ,fontSize:'3rem'}}/>
@@ -50,10 +50,10 @@ const useStyles = makeStyles((theme) => ({
 
         section:{
             minHeight:"30vh",
-          
+            backgroundColor:"#263238",
         },
         sectiondark:{
-            background:"#263238",
+            backgroundColor:"#263238",
             color:"#fff",
            
         },

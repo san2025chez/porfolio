@@ -77,6 +77,7 @@ const Navbar = () => {
                             className={classes.sidebar}
                             to={id}
                             spy={true}
+                            onClick={() => setOpen(false)}
                             activeClass = "active"
                             smooth={true}
                             duration={500}

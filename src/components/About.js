@@ -19,8 +19,8 @@ const About = ({title, dark, id}) => {
           <CardContent className={classes.cardcontent}>
   
             <TypeWriteEffect
-            text="Hi , I am Vanesa Sanchez Full Stack-Developer"
-            textStyle={{fontSize: "4rem", fontWeight: "700px", color:"white"}}
+            text="Soy Vanesa Sanchez, Backend- Developer"
+            textStyle={{fontSize: "3rem", fontWeight: "700px", color:"white"}}
             startDelay={100}
             
             typeSpeed={100}
@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
           height:'50%'
         },
         card:{
-     height: "80vh",
+     height: "85vh",
      backgroundColor:"#263238",
      display:"flex",
     
@@ -96,13 +96,13 @@ const useStyles = makeStyles((theme) => ({
         },
         pdfbutton:{
           position:"absolute",
-          bottom: "1rem",
+          bottom: "0.5rem",
           right:"4rem",
           [theme.breakpoints.down("sm")]:{
 bottom:"2rem",
 right: "1rem"
           },
-          backgroundColor: "#90A4AE",
+          backgroundColor: "#2196f3",
           padding: theme.spacing(3),
           "&: hover": {
             backgroundColor:"#fff"

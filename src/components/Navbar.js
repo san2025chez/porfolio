@@ -98,7 +98,7 @@ const Navbar = () => {
 }
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: "#570e5d",
+        backgroundColor: "black",
         top: 0,
         left: 0,
         right: 0,
@@ -158,7 +158,7 @@ sidebar:{
         width: "60vw"
     },
     " & h5":{
-        margin: theme.spacing(10,0,0,4),
+        margin: theme.spacing(7,0,0,4),
         fontSize: "1.4rem",
         color:"#333",
         fontWeight: "bold"

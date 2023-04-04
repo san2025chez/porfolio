@@ -51,21 +51,21 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import node from "../img/node.png"
+import node from "../img/node10.png"
 import { makeStyles } from "@material-ui/core";
-import mysql from "../img/mysql.png"
-import javascript from "../img/javascript.png"
-import html from "../img/html.png"
-import css from "../img/css.png"
+import mysql from "../img/mysql8.png"
+import javascript from "../img/js8.png"
+import html from "../img/html8.png"
+import css from "../img/icons8.png"
 import {Card, CardMedia} from '@material-ui/core';
 
-import mongo from "../img/descarga.png"
-import react from '../img/react.jpg'
-import git from '../img/git.png'
-import ts from '../img/ts.png'
-import pg from '../img/pg.png'
-import express from '../img/express.jpg'
-import nest from '../img/nest.png'
+import mongo from "../img/mongo8.png"
+import react from '../img/react8.png'
+import git from '../img/git9.png'
+import ts from '../img/ts9.png'
+import pg from '../img/postgres8.png'
+import express from '../img/ex8.png'
+import nest from '../img/nest8.png'
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === '#607d8b' ? '#1A2027' : '#fff',
@@ -85,95 +85,89 @@ export default function Technologies() {
 
                 <Grid item xs={6} sm={6} md={2} >
                  
-                        <Card className={classes.card}>
+                      
                             <CardMedia image={node} alt={"title"} className={classes.image} />
-                        </Card>
+                    
                   
                 </Grid>
                 <Grid item xs={6} sm={6} md={2}>
                    
-                        <Card className={classes.card}>
+                       
                             <CardMedia image={css} alt={"title"} className={classes.image} />
-                        </Card>
+                     
                    
                 </Grid>
                 <Grid item xs={6} sm={6} md={2}>
                 
-                <Card className={classes.card}>
+           
                     <CardMedia image={javascript} alt={"title"} className={classes.image} />
-                </Card>
-          
+             
                 </Grid>
 
                 <Grid item xs={6} sm={6} md={2} >
                  
-                        <Card className={classes.card}>
                             <CardMedia image={mongo} alt={"title"} className={classes.image} />
-                        </Card>
+                       
                   
                 </Grid>
                 <Grid item xs={6} sm={6} md={2}>
                    
-                        <Card className={classes.card}>
+                   
                             <CardMedia image={mysql} alt={"title"} className={classes.image} />
-                        </Card>
+                  
                    
                 </Grid>
                 <Grid item xs={6} sm={6} md={2}>
                 
-                <Card className={classes.card}>
+
                     <CardMedia image={html} alt={"title"} className={classes.image} />
-                </Card>
+
           
           
                 </Grid>
                 <Grid item xs={6} sm={6} md={2}>
                 
-                <Card className={classes.card}>
+         
                     <CardMedia image={react} alt={"title"} className={classes.image} />
-                </Card>
+               
           
           
                 </Grid>
                 <Grid item xs={6} sm={6} md={2}>
                 
-                <Card className={classes.card}>
+              
                     <CardMedia image={git} alt={"title"} className={classes.image} />
-                </Card>
+         
           
           
                 </Grid>
                 <Grid item xs={6} sm={6} md={2}>
                 
-                <Card className={classes.card}>
                     <CardMedia image={ts} alt={"title"} className={classes.image} />
-                </Card>
+               
           
           
                 </Grid>
 
                 <Grid item xs={6} sm={6} md={2}>
                 
-                <Card className={classes.card}>
                     <CardMedia image={pg} alt={"title"} className={classes.image} />
-                </Card>
+            
           
           
                 </Grid>
                 <Grid item xs={6} sm={6} md={2}>
-                
-                <Card className={classes.card}>
+      
                     <CardMedia image={express} alt={"title"} className={classes.image} />
-                </Card>
+  
           
           
                 </Grid>
 
                 <Grid item xs={6} sm={6} md={2}>
-                
-                <Card className={classes.card}>
+      
                     <CardMedia image={nest} alt={"title"} className={classes.image} />
-                </Card>
+          
           
           
                 </Grid>
@@ -215,9 +209,10 @@ const useStyles = makeStyles((theme) => ({
     height: '200px'
   },
   box1:{
-    backgroundColor:"white"
+    backgroundColor:"#263238"
   },
-  card:{ width: '100px', height: '100px' },
+  card:{ width: '100px', height: '100px',
+backgroundColor:'#263238' },
 image:{
   width:100,
 height: 100},

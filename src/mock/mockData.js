@@ -18,10 +18,10 @@ const mockData=[
         image: dash,
         link:"https://youtu.be/sEvaTir8z_Y"
     },
-    {
+   /*  {
         title: "Prestamos Personales",
         image: prestamo ,
         link:"https://www.youtube.com/watch?v=-7UnSA3w7hU"
-    }
+    } */
 ]
 export default mockData;

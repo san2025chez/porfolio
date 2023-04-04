@@ -32,10 +32,10 @@ const useStyles = makeStyles((theme) => ({
   section: {
     minHeight: "70vh",
 
-    backgroundColor:"white"
+    backgroundColor:"#263238"
   },
   sectiondark: {
-    backgroundColor: "#607d8b",
+    backgroundColor:"#263238",
     color: "#607d8b",
    
   },

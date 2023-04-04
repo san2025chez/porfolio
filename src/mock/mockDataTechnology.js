@@ -1,9 +1,9 @@
-import node from "../img/nodejs.png";
+import node from "../img/node.svg";
 import javascript from "../img/javascript.png"
 import react from "../img/react.jpg"
 import mysql from "../img/mysql.png"
 import postgres from "../img/postgres.png"
-import css from "../img/css.png"
+import css from "../img/icons8.png"
 import html from "../img/html.png";
 const mockData=[
     {

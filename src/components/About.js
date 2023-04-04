@@ -2,6 +2,7 @@ import React from 'react'
 import {Button, CardMedia, makeStyles, Typography,Card,CardContent, CardActions } from "@material-ui/core";
 import richisito from "../img/any.jpg"
 import TypeWriteEffect from "react-typewriter-effect"
+import Avatar from '@material-ui/core/Avatar';
 import cv from "../img/cv.pdf"
 const About = ({title, dark, id}) => {
     if (dark) {
@@ -13,14 +14,14 @@ const About = ({title, dark, id}) => {
       <div className={classes.sectioncontent} id={id}>
         <Typography variant="h5">{title}</Typography>
         <Card className={classes.card}>
-          <CardMedia  image={richisito} className={classes.media} title="picture"/>
+
 
           <CardContent className={classes.cardcontent}>
             <TypeWriteEffect
             text="Hi , I am Vanesa Sanchez ,Full Stack-Developer"
-            textStyle={{fontSize: "2rem", fontWeight: "700px"}}
+            textStyle={{fontSize: "2rem", fontWeight: "700px", color:"white"}}
             startDelay={100}
-            cursorColor="black"
+            cursorColor="white"
             typeSpeed={100}
             />
 
@@ -46,11 +47,11 @@ const useStyles = makeStyles((theme) => ({
 
         section:{
             minHeight:"100vh",
-            backgroundColor: "#252a5c",
+            backgroundColor: "#263238",
 
         },
         sectiondark:{
-            background: "#252a5c",
+            background: "#263238",
         /*     "#607d8b", */
             color:"#fff"
         },
@@ -58,8 +59,14 @@ const useStyles = makeStyles((theme) => ({
           maxWidth: "80vw",
           margin: "0 auto"
         },
+        rounded: {
+          borderRadius: '100%',
+          width:'20%',
+          height:'50%'
+        },
         card:{
-     height: "70vh",
+     height: "50vh",
+     backgroundColor:"#263238",
      display:"flex",
      marginTop: theme.spacing(6),
      position: "relative",
@@ -86,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
 bottom:"2rem",
 right: "1rem"
           },
-          backgroundColor: "#252a5c",
+          backgroundColor: "#90A4AE",
           padding: theme.spacing(3),
           "&: hover": {
             backgroundColor:"#fff"

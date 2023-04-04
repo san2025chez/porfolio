@@ -12,7 +12,6 @@ const Contact = ({title, dark, id}) => {
   return (
     <div className={`${classes.section} ${dark && classes.sectiondark}`}>
     <div className={classes.sectioncontent} id={id}>
-    <Typography variant="h3">{title}</Typography>
     <Grid container spacing={2} alignItems="center" className={classes.grid}>
     <Grid item>
    
@@ -53,11 +52,12 @@ const useStyles = makeStyles((theme) => ({
           
         },
         sectiondark:{
-            background:"white",
-            color:"#fff"
+            background:"#263238",
+            color:"#fff",
+           
         },
         grid: {
-   
+   paddingTop:'50px',
               display: 'flex',
     justifyContent: 'center',
 

@@ -12,13 +12,20 @@ const MyWork = ({ title, dark, id }) => {
         <Typography variant="h5" style={{ textAlign: 'center',fontWeight: 'bold' , color:'white', fontSize:'2rem'} }>{title}</Typography>
         <Grid container className={classes.grid}>
           {
-            mockData.map(({ title, image, link }, index) => (
+            mockData.map(({ title, image, link,git }, index) => (
               <Grid item key={index} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                   <CardMedia image={image} className={classes.caratula} titulo="miimagen" />
-                  <CardContent>
+                  <CardContent style={{padding: '0.5rem',   display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center'}}>
                     <Link href={link} color="primary" target="_blank" rel="noopener">
                       {title}
+                    </Link>
+                    <br/> 
+                    <Link href={git} color="primary" target="_blank" rel="noopener">
+                      Ir al Repositorio
                     </Link>
                   </CardContent>
                 </Card>

@@ -76,14 +76,14 @@ perfeccionarme como profesional.Estoy abierto a oportunidades de trabajo donde p
                        
                   
                 </Grid>
-                <Grid item xs={4} sm={6} md={2}>
+                <Grid item xs={4} sm={3} md={2}>
                    
                    
                             <CardMedia image={mysql} alt={"title"} className={classes.image} />
                   
                    
                 </Grid>
-                <Grid item xs={4} sm={6} md={2}>
+                <Grid item xs={4} sm={3} md={2}>
                 
 
                     <CardMedia image={html} alt={"title"} className={classes.image} />
@@ -91,7 +91,7 @@ perfeccionarme como profesional.Estoy abierto a oportunidades de trabajo donde p
           
           
                 </Grid>
-                <Grid item xs={4} sm={6} md={2}>
+                <Grid item xs={4} sm={3} md={2}>
                 
          
                     <CardMedia image={react} alt={"title"} className={classes.image} />
@@ -99,7 +99,7 @@ perfeccionarme como profesional.Estoy abierto a oportunidades de trabajo donde p
           
           
                 </Grid>
-                <Grid item xs={4} sm={6} md={2}>
+                <Grid item xs={4} sm={3} md={2}>
                 
               
                     <CardMedia image={git} alt={"title"} className={classes.image} />
@@ -107,7 +107,7 @@ perfeccionarme como profesional.Estoy abierto a oportunidades de trabajo donde p
           
           
                 </Grid>
-                <Grid item xs={4} sm={6} md={2}>
+                <Grid item xs={4} sm={3} md={2}>
                 
                     <CardMedia image={ts} alt={"title"} className={classes.image} />
                
@@ -115,14 +115,14 @@ perfeccionarme como profesional.Estoy abierto a oportunidades de trabajo donde p
           
                 </Grid>
 
-                <Grid item xs={4} sm={6} md={2}>
+                <Grid item xs={4} sm={3} md={2}>
                 
                     <CardMedia image={pg} alt={"title"} className={classes.image} />
             
           
           
                 </Grid>
-                <Grid item xs={4} sm={6} md={2}>
+                <Grid item xs={4} sm={3} md={2}>
       
                     <CardMedia image={express} alt={"title"} className={classes.image} />
   
@@ -130,7 +130,7 @@ perfeccionarme como profesional.Estoy abierto a oportunidades de trabajo donde p
           
                 </Grid>
 
-                <Grid item xs={4} sm={6} md={2}>
+                <Grid item xs={4} sm={3} md={2}>
       
                     <CardMedia image={nest} alt={"title"} className={classes.image} />
           

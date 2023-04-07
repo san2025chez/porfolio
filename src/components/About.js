@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
           backgroundPosition: 'center',
           backgroundSize: 'cover',
      height: "85vh",
-     backgroundColor:"yellow",
+     backgroundColor:"#263238",
      display:"flex",
     
      position: "relative",

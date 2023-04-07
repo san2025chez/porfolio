@@ -33,8 +33,8 @@ const About = ({title, dark, id}) => {
           </CardContent>
           <CardActions>
             <Button className={classes.pdfbutton} variant="contained">
-              <a href={cv} download>
-              Dowload CV
+              <a href={cv}   download>
+            <h4>  Dowload CV</h4>
               </a>
               </Button>
           </CardActions>
@@ -69,14 +69,17 @@ const useStyles = makeStyles((theme) => ({
           height:'50%'
         },
         card:{
+          backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/despensa-c8032.appspot.com/o/Crop_azul.webp?alt=media&token=d322d53d-8c8f-45f3-9ef9-5c6fa96c01bf")',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
      height: "85vh",
-     backgroundColor:"#263238",
+     backgroundColor:"yellow",
      display:"flex",
     
      position: "relative",
      [theme.breakpoints.down('sm')]: {
       maxWidth: 600,
-      maxHeight:600
+      maxHeight:700
     },
         },
         cardcontent:{

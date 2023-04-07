@@ -19,7 +19,10 @@ const MyWork = ({ title, dark, id }) => {
                   <CardContent style={{padding: '0.5rem',   display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center'}}>
+    justifyContent: 'center',
+    '@media (maxWidth: 412px)': {
+      padding: '0.1rem',
+    }}}>
                     <Link href={link} color="primary" target="_blank" rel="noopener">
                       {title}
                     </Link>
@@ -60,7 +63,10 @@ const useStyles = makeStyles((theme) => ({
   card: {
     maxWidth: 345,
     minHeight: 275,
-    margin: theme.spacing(3)
+    margin: theme.spacing(3),
+    [theme.breakpoints.down('sm','xs')]: {
+minHeight:'210px'
+    },
   },
   caratula:{
     height: 0,

@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
          //'url(${"../img/portada.webp"})', 
          backgroundPosition: 'center',
          border: 'none',
-         variant:"elevation",
+         variant:'elevation',
          boxShadow: 'none',
          outline: 'none',
        

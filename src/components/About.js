@@ -55,9 +55,14 @@ const useStyles = makeStyles((theme) => ({
 
         },
         sectiondark:{
-            background: "#263238",
-        /*     "#607d8b", */
-            color:"#fff",
+          backgroundSize: 'cover',
+          background: "#263238",
+      /*     "#607d8b", */
+          color:"#fff",
+          backgroundImage:  `url(${portada})`,
+          backgroundRepeat: 'no-repeat',
+   
+            
         },
         sectioncontent:{
           maxWidth: "80vw",
@@ -72,12 +77,14 @@ const useStyles = makeStyles((theme) => ({
         },
         card:{
          // backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/despensa-c8032.appspot.com/o/Crop_azul.webp?alt=media&token=d322d53d-8c8f-45f3-9ef9-5c6fa96c01bf")',
-         backgroundImage:  `url(${portada})`,
+
          //'url(${"../img/portada.webp"})', 
          backgroundPosition: 'center',
+       
+
           backgroundSize: 'cover',
      height: "85vh",
-     backgroundColor:"#263238",
+     backgroundColor:"transparent",
      display:"flex",
     
      position: "relative",

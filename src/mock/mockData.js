@@ -19,7 +19,7 @@ const mockData=[
         title: "Prestamos Personales",
         image: dash,
         git:"https://github.com/san2025chez/Prestamos-Personales-Backend",
-        link:"https://youtu.be/sEvaTir8z_Y"
+        link:"https://youtu.be/ASrncm_u3Ys"
     },
    /*  {
         title: "Prestamos Personales",

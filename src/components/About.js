@@ -3,7 +3,7 @@ import {Button, CardMedia, makeStyles,Typography,Card,CardContent, CardActions }
 import richisito from "../img/any.jpg"
 import TypeWriteEffect from "react-typewriter-effect"
 import Avatar from '@material-ui/core/Avatar';
-import cv from "../img/cv.pdf"
+import CVanesa from "../img/CVanesa.pdf"
 import portada from "../img/portada.webp"
 const About = ({title, dark, id}) => {
     if (dark) {
@@ -34,7 +34,7 @@ const About = ({title, dark, id}) => {
           </CardContent>
           <CardActions>
             <Button className={classes.pdfbutton} variant="contained">
-              <a href={cv}   download>
+              <a href={CVanesa}   download>
             <h4>  Dowload CV</h4>
               </a>
               </Button>

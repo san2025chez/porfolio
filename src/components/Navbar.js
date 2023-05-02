@@ -98,7 +98,7 @@ const Navbar = () => {
 }
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: "#570e5d",
+        backgroundColor:"#351542",
         top: 0,
         left: 0,
         right: 0,
@@ -109,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         justifyContent: "flex-start",
         alignItems: "center",
-        backgroundColor:"#bdbdbd"
+        backgroundColor:"red",
 
     },
     logo: {

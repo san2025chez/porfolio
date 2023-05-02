@@ -34,7 +34,7 @@ const About = ({title, dark, id}) => {
           </CardContent>
           <CardActions>
             <Button className={classes.pdfbutton} variant="contained">
-              <a href={CVanesa}   download>
+              <a href={CVanesa}  download>
             <h4>  Dowload CV</h4>
               </a>
               </Button>

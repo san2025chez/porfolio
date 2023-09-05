@@ -12,7 +12,7 @@ const mockData=[
     {
         title: "E-commerce",
         image: ecomerce ,
-        git:"https://github.com/san2025chez/anny",
+        git:"https://github.com/san2025chez/backend-ecommerce",
         link:"https://san2025chez.github.io/new-ecomerce/"
     },
     {

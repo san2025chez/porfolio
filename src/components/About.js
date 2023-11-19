@@ -3,7 +3,7 @@ import {Button, CardMedia, makeStyles,Typography,Card,CardContent, CardActions }
 import richisito from "../img/any.jpg"
 import TypeWriteEffect from "react-typewriter-effect"
 import Avatar from '@material-ui/core/Avatar';
-import CVanesa from "../img/CVanesa.pdf"
+import CVanesa from "../img/cvanesaBackend.pdf"
 import portada from "../img/portada.webp"
 const About = ({title, dark, id}) => {
     if (dark) {

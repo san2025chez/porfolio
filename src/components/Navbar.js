@@ -98,7 +98,7 @@ const Navbar = () => {
 }
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor:"#00BFA5",
+        backgroundColor:'#d2ede3',
         top: 0,
         left: 0,
         right: 0,
@@ -124,8 +124,8 @@ menu:{
      display: "none"
     },
     "& a": {
-        color: "white",
-        fontSize: "1.4rem",
+     color:'#228c55',
+             fontSize: "1.4rem",
         fontWeight:"bold",
         marginLeft: theme.spacing(3)
     },

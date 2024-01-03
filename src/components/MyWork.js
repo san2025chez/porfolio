@@ -9,7 +9,7 @@ const MyWork = ({ title, dark, id }) => {
   return (
     <div className={`${classes.section} ${classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
-        <Typography variant="h5" style={{ textAlign: 'center',fontWeight: 'bold' , color:'white', fontSize:'2rem'} }>{title}</Typography>
+        <Typography variant="h5" style={{ textAlign: 'center',fontWeight: 'bold' , color:'#228c55', fontSize:'2rem'} }>{title}</Typography>
         <Grid container className={classes.grid}>
           {
             mockData.map(({ title, image, link,git }, index) => (
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "80vh",
   },
   sectiondark: {
-    backgroundColor:'#4DD0B5',
+    backgroundColor:'#d2ede3',
     background:"#263238",
     color: "white"
   },
@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     maxWidth: 345,
-  backgroundColor:'#57bd9e',
+  backgroundColor:'#8fd3ba',
     minHeight: 275,
     margin: theme.spacing(3),
     [theme.breakpoints.down('sm','xs')]: {

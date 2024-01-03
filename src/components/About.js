@@ -21,7 +21,7 @@ const About = ({title, dark, id}) => {
   
             <TypeWriteEffect
             text="Soy Vanesa Sanchez, Backend- Developer"
-            textStyle={{fontSize: "3rem", fontWeight: "700px", color:"white"}}
+            textStyle={{fontSize: "3rem", fontWeight: "700px", color:'#228c55'}}
             startDelay={100}
             
             typeSpeed={100}
@@ -61,7 +61,8 @@ const useStyles = makeStyles((theme) => ({
           color:"#00BFA5",
           /* backgroundImage:  `url(${portada})`,
           backgroundRepeat: 'no-repeat', */
-          backgroundColor:'#4DD0B5'
+          backgroundColor:'#d2ede3'
+          /* backgroundColor:'#4DD0B5' */
    
             
         },
@@ -121,7 +122,7 @@ const useStyles = makeStyles((theme) => ({
 bottom:"2rem",
 right: "1rem"
           },
-          backgroundColor: "#351542",
+          backgroundColor: "#228c55",
           padding: theme.spacing(3),
           "&: hover": {
             backgroundColor:"#fff"

@@ -11,7 +11,7 @@ const Skills = ({ title, dark, id }) => {
   return (
     <div className={`${classes.section} ${classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
-      <Typography variant="h5" style={{ textAlign: 'center' ,fontWeight: 'bold' , color:'white', fontSize:'2rem'}}>{title}</Typography>
+      <Typography variant="h5" style={{ textAlign: 'center' ,fontWeight: 'bold' , color:'#228c55', fontSize:'2rem'}}>{title}</Typography>
       <br/> 
       
   
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor:"#263238"
   },
   sectiondark: {
-    backgroundColor:'#4DD0B5',
+    backgroundColor:'#d2ede3',
     color: "#607d8b",
    
   },

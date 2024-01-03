@@ -38,7 +38,7 @@ export default function Technologies() {
     return (
         <Box sx={{ flexGrow: 1 }} className={classes.box1}>
             
-          <Typography style={{fontSize:'20px', color:'white' , textAlign:'justify'}}>
+          <Typography style={{fontSize:'20px', color:'#228c55' , textAlign:'justify'}}>
           Ingeniera Informática con experiencia laboral en desarrollo de proyecto software. Curiosa, creativa, y orientada a resultados. Siempre en busca de la mejora personal continua, mi objetivo es desempeñarme en el área de programación con el rol de
 desarrollador Back-End, con la finalidad de seguir creciendo y perfeccionarme como profesional. Estoy abierto a oportunidades de trabajo donde pueda contribuir, aprender y crecer. Si tiene una buena oportunidad que coincida con mis habilidades
  y experiencia, no dude en ponerse en contacto conmigo.</Typography>
@@ -144,7 +144,7 @@ const useStyles = makeStyles((theme) => ({
     height: '200px'
   },
   box1:{
-    backgroundColor:'#4DD0B5'
+    backgroundColor:'#d2ede3',
   },
   card:{ width: '100px', height: '100px',
 backgroundColor:'#263238' },

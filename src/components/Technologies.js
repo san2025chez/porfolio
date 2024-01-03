@@ -144,7 +144,7 @@ const useStyles = makeStyles((theme) => ({
     height: '200px'
   },
   box1:{
-    backgroundColor:"#263238"
+    backgroundColor:'#4DD0B5'
   },
   card:{ width: '100px', height: '100px',
 backgroundColor:'#263238' },

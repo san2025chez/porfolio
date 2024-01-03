@@ -14,9 +14,9 @@ function App() {
     <div className={classes.root}>
 
       <Navbar></Navbar>
-      <About title="Inicio" id="about" dark={true} />
-      <Skills title="Sobre Mi" id="skill" dark={false}/>
-      <MyWork title="Trabajos" id="work" dark={true}/>
+      <About title="Inicio" id="about"/>
+      <Skills title="Sobre Mi" id="skill" dark={"#00BFA5"}/>
+      <MyWork title="Trabajos" id="work" dark={false}/>
       <Contact title="Contactos" id="contact" dark={true} />
     </div>
   );

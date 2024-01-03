@@ -21,10 +21,10 @@ const mockData=[
         git:"https://github.com/san2025chez/Prestamos-Personales-Backend",
         link:"https://youtu.be/ASrncm_u3Ys"
     },
-   /*  {
-        title: "Prestamos Personales",
+    {
+        title: "Dashboard",
         image: prestamo ,
-        link:"https://www.youtube.com/watch?v=-7UnSA3w7hU"
-    } */
+        link:"https://www.youtube.com/watch?v=q3C8QBhPa9E"
+    }
 ]
 export default mockData;

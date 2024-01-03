@@ -11,7 +11,7 @@ const About = ({title, dark, id}) => {
     }
     const classes= useStyles();
   return (
-    <div className={`${classes.section} ${dark && classes.sectiondark}`}>
+    <div className={`${classes.section} ${ classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
  
         <Card className={classes.card}>
@@ -56,11 +56,12 @@ const useStyles = makeStyles((theme) => ({
         },
         sectiondark:{
           backgroundSize: 'cover',
-          background: "#263238",
+          background: "#00BFA5",
       /*     "#607d8b", */
-          color:"#fff",
-          backgroundImage:  `url(${portada})`,
-          backgroundRepeat: 'no-repeat',
+          color:"#00BFA5",
+          /* backgroundImage:  `url(${portada})`,
+          backgroundRepeat: 'no-repeat', */
+          backgroundColor:'#4DD0B5'
    
             
         },

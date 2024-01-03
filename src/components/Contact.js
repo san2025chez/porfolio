@@ -10,7 +10,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 const Contact = ({title, dark, id}) => {
     const classes= useStyles();
   return (
-    <div className={`${classes.section} ${dark && classes.sectiondark}`}>
+    <div className={`${classes.section} ${classes.sectiondark}`}>
     <div className={classes.sectioncontent} id={id}>
     <Typography variant="h5" style={{ textAlign: 'center' , fontWeight: 'bold' , color:'white', fontSize:'2rem'}}>{title}</Typography>
     <Grid container spacing={2} alignItems="center" className={classes.grid}>
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
             backgroundColor:"#263238",
         },
         sectiondark:{
-            backgroundColor:"#263238",
+          backgroundColor:'#4DD0B5',
             color:"#fff",
            
         },

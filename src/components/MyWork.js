@@ -7,7 +7,7 @@ import { minHeight } from '@mui/system';
 const MyWork = ({ title, dark, id }) => {
   const classes = useStyles();
   return (
-    <div className={`${classes.section} ${dark && classes.sectiondark}`}>
+    <div className={`${classes.section} ${classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
         <Typography variant="h5" style={{ textAlign: 'center',fontWeight: 'bold' , color:'white', fontSize:'2rem'} }>{title}</Typography>
         <Grid container className={classes.grid}>
@@ -23,11 +23,11 @@ const MyWork = ({ title, dark, id }) => {
     '@media (maxWidth: 412px)': {
       padding: '0.1rem',
     }}}>
-                    <Link href={link} color="primary" target="_blank" rel="noopener">
+                    <Link href={link}  target="_blank" rel="noopener">
                       {title}
                     </Link>
                     <br/> 
-                    <Link href={git} color="primary" target="_blank" rel="noopener">
+                    <Link href={git}  target="_blank" rel="noopener">
                       Ir al Repositorio
                     </Link>
                   </CardContent>
@@ -47,8 +47,9 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "80vh",
   },
   sectiondark: {
+    backgroundColor:'#4DD0B5',
     background:"#263238",
-    color: "#fff"
+    color: "white"
   },
 
   sectioncontent:{
@@ -62,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     maxWidth: 345,
+  backgroundColor:'#57bd9e',
     minHeight: 275,
     margin: theme.spacing(3),
     [theme.breakpoints.down('sm','xs')]: {

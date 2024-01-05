@@ -1,9 +1,8 @@
 import React from 'react'
 import {Button, CardMedia, makeStyles,Typography,Card,CardContent, CardActions } from "@material-ui/core";
-import richisito from "../img/any.jpg"
 import TypeWriteEffect from "react-typewriter-effect"
 import Avatar from '@material-ui/core/Avatar';
-import CVanesa from "../img/cvanesaBackend.pdf"
+import CVanesa from "../img/cv2024.pdf";
 import portada from "../img/portada.webp"
 const About = ({title, dark, id}) => {
     if (dark) {

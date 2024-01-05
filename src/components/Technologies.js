@@ -13,7 +13,7 @@ import mysql from "../img/mysql8.png"
 import javascript from "../img/js8.png"
 import html from "../img/html8.png"
 import css from "../img/icons8.png"
-import {Card, CardMedia} from '@material-ui/core';
+import { Card, CardMedia } from '@material-ui/core';
 
 import mongo from "../img/mongo8.png"
 import react from '../img/react8.png'
@@ -37,120 +37,135 @@ export default function Technologies() {
     const classes = useStyles();
     return (
         <Box sx={{ flexGrow: 1 }} className={classes.box1}>
-            
-          <Typography style={{fontSize:'20px', color:'#228c55' , textAlign:'justify'}}>
-          Ingeniera Informática con experiencia laboral en desarrollo de proyecto software. Curiosa, creativa, y orientada a resultados. Siempre en busca de la mejora personal continua, mi objetivo es desempeñarme en el área de programación con el rol de
-desarrollador Back-End, con la finalidad de seguir creciendo y perfeccionarme como profesional. Estoy abierto a oportunidades de trabajo donde pueda contribuir, aprender y crecer. Si tiene una buena oportunidad que coincida con mis habilidades
- y experiencia, no dude en ponerse en contacto conmigo.</Typography>
-<br/><br/>
+             <Grid container spacing={2}>
+                <Grid item xs={12}> 
+
+            <Typography style={{ fontSize: '20px', color: '#228c55', textAlign: 'justify' }}>
+                Ingeniera Informática con experiencia laboral en desarrollo de proyecto software. Curiosa, creativa, y orientada a resultados. Siempre en busca de la mejora personal continua, mi objetivo es desempeñarme en el área de programación con el rol de
+                desarrollador Back-End, con la finalidad de seguir creciendo y perfeccionarme como profesional. Estoy abierto a oportunidades de trabajo donde pueda contribuir, aprender y crecer. Si tiene una buena oportunidad que coincida con mis habilidades
+                y experiencia, no dude en ponerse en contacto conmigo.</Typography>
+                <br /><br />
+                </Grid>
+      
             <Grid container spacing={2}>
 
                 <Grid item xs={4} sm={3} md={2} >
-                 
-                      
-                            <CardMedia image={node} alt={"title"} className={classes.image} />
-                    
-                  
+
+
+                    <CardMedia image={node} alt={"title"} className={classes.image} />
+
+
                 </Grid>
                 <Grid item xs={4} sm={3} md={2}>
-                   
-                       
-                            <CardMedia image={css} alt={"title"} className={classes.image} />
-                     
-                   
+
+
+                    <CardMedia image={css} alt={"title"} className={classes.image} />
+
+
                 </Grid>
                 <Grid item xs={4} sm={3} md={2}>
-                
-           
+
+
                     <CardMedia image={javascript} alt={"title"} className={classes.image} />
-             
+
                 </Grid>
 
                 <Grid item xs={4} sm={3} md={2} >
-                 
-                            <CardMedia image={mongo} alt={"title"} className={classes.image} />
-                       
-                  
+
+                    <CardMedia image={mongo} alt={"title"} className={classes.image} />
+
+
                 </Grid>
                 <Grid item xs={4} sm={3} md={2}>
-                   
-                   
-                            <CardMedia image={mysql} alt={"title"} className={classes.image} />
-                  
-                   
+
+
+                    <CardMedia image={mysql} alt={"title"} className={classes.image} />
+
+
                 </Grid>
                 <Grid item xs={4} sm={3} md={2}>
-                
+
 
                     <CardMedia image={html} alt={"title"} className={classes.image} />
 
-          
-          
+
+
                 </Grid>
                 <Grid item xs={4} sm={3} md={2}>
-                
-         
+
+
                     <CardMedia image={react} alt={"title"} className={classes.image} />
-               
-          
-          
+
+
+
                 </Grid>
                 <Grid item xs={4} sm={3} md={2}>
-                
-              
+
+
                     <CardMedia image={git} alt={"title"} className={classes.image} />
-         
-          
-          
+
+
+
                 </Grid>
                 <Grid item xs={4} sm={3} md={2}>
-                
+
                     <CardMedia image={ts} alt={"title"} className={classes.image} />
-               
-          
-          
+
+
+
                 </Grid>
 
                 <Grid item xs={4} sm={3} md={2}>
-                
+
                     <CardMedia image={pg} alt={"title"} className={classes.image} />
-            
-          
-          
+
+
+
                 </Grid>
                 <Grid item xs={4} sm={3} md={2}>
-      
+
                     <CardMedia image={express} alt={"title"} className={classes.image} />
-  
-          
-          
+
+
+
                 </Grid>
 
                 <Grid item xs={4} sm={3} md={2}>
-      
+
                     <CardMedia image={nest} alt={"title"} className={classes.image} />
-          
-          
-          
+
+
+
                 </Grid>
 
+            </Grid>
             </Grid>
         </Box>
 
     );
 }
 const useStyles = makeStyles((theme) => ({
-  milogo:{
-    height: '200px'
-  },
-  box1:{
-    backgroundColor:'#d2ede3',
-  },
-  card:{ width: '100px', height: '100px',
-backgroundColor:'#263238' },
-image:{
-  width:50,
-height: 50},
+    milogo: {
+        height: '200px'
+    },
+    box1: {
+        backgroundColor: '#d2ede3',
+    
+        backgroundColor: '#d2ede3',
+      
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        
+    },
+    card: {
+        width: '100px', height: '100px',
+        backgroundColor: '#263238'
+    },
+    image: {
+        width: 50,
+        height: 50,margin :'auto'
+    },
     logo: {
         width: "40%",
         height: "50%"
@@ -164,7 +179,7 @@ height: 50},
         height: "100px"
 
     },
-    mongo:{
+    mongo: {
         width: "50px",
         height: "50px"
 
@@ -178,7 +193,7 @@ height: 50},
         minHeight: 75,
         margin: theme.spacing(3)
     },
-    box:{
-      height: "50%"
+    box: {
+        height: "50%"
     }
 }))

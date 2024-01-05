@@ -2,6 +2,7 @@ import prestamo from "../img/prestamo.png";
 import ecomerce from "../img/ecomerce.jpeg"
 import dash from "../img/dash.jpeg"
 import personales from "../img/personales.jpeg"
+import dashcommerce from "../img/dashcommerce.png"
 const mockData=[
     {
         title: "Prestamos Personales",
@@ -23,7 +24,7 @@ const mockData=[
     },
     {
         title: "Dashboard",
-        image: prestamo ,
+        image: dashcommerce ,
         link:"https://www.youtube.com/watch?v=q3C8QBhPa9E"
     }
 ]

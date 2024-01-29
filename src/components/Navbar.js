@@ -14,22 +14,22 @@ const links =[
     {
         id:"about",
         text: "Inicio",
-        icon: <InfoIcon fontSize="large"/>
+        icon: <InfoIcon fontSize="medium"/>
     },
     {
         id:"skill",
         text: "Acerca de Mi",
-        icon: <EmojiObjectsIcon fontSize="large"/>
+        icon: <EmojiObjectsIcon fontSize="medium"/>
     },
     {
         id:"work",
         text: "Trabajos",
-        icon: <BuildTwoToneIcon fontSize="large"/>
+        icon: <BuildTwoToneIcon fontSize="medium"/>
     },
     {
         id:"contact",
         text: "Contactos",
-        icon: <ContactMailTwoToneIcon fontSize="large"/>
+        icon: <ContactMailTwoToneIcon fontSize="medium"/>
     },
     
 ]
@@ -69,7 +69,7 @@ const Navbar = () => {
         <Drawer style={{color:'red'}} anchor="right" open={open} onClose={() => setOpen(false)}>
         <div className={classes.sidebarWrapper}>
             <IconButton  onClick={() => setOpen(false)}>
-                <CancelIcon fontSize="large" className={classes.cancelicon}></CancelIcon>
+                <CancelIcon fontSize="medium" className={classes.cancelicon}></CancelIcon>
             </IconButton>
             <Divider/>
             {
@@ -157,14 +157,15 @@ cancelicon:{
 },
 sidebar:{
     width:"40vh",
+
     [theme.breakpoints.down("sm")]:{
         width: "60vw",
         backgroundColor:'#00BFA5'
     },
    
     " & h5":{
-        margin: theme.spacing(7,0,0,4),
-        fontSize: "1.4rem",
+        margin: theme.spacing(2,0,0,4),
+        fontSize: "1rem",
         color:"#333",
         fontWeight: "bold"
     },
@@ -176,6 +177,8 @@ sidebar:{
 sidebarWrapper: {
     background: '#8fd3ba', // Set your desired background color (green in this case)
     minHeight: '100vh', // Ensure the sidebar has at least the height of the viewport
+
+
 },
     
 

@@ -19,7 +19,7 @@ const About = ({title, dark, id}) => {
           <CardContent className={classes.cardcontent}>
   
             <TypeWriteEffect
-            text="Soy Vanesa Sanchez, Backend- Developer"
+            text="Soy Vanesa Sanchez, Full-Stack Developer"
             textStyle={{fontSize: "3rem", fontWeight: "700px", color:'#228c55'}}
             startDelay={100}
             

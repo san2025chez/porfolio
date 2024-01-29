@@ -41,9 +41,18 @@ export default function Technologies() {
                 <Grid item xs={12}> 
 
             <Typography style={{ fontSize: '20px', color: '#228c55', textAlign: 'justify' }}>
-                Ingeniera Informática con experiencia laboral en desarrollo de proyecto software. Curiosa, creativa, y orientada a resultados. Siempre en busca de la mejora personal continua, mi objetivo es desempeñarme en el área de programación con el rol de
-                desarrollador Back-End, con la finalidad de seguir creciendo y perfeccionarme como profesional. Estoy abierto a oportunidades de trabajo donde pueda contribuir, aprender y crecer. Si tiene una buena oportunidad que coincida con mis habilidades
-                y experiencia, no dude en ponerse en contacto conmigo.</Typography>
+
+¡Hola! Soy Vanesa Sanchez, Ingeniera Informática con una sólida experiencia en el desarrollo de proyectos
+ de software. Mi enfoque curioso y creativo se combina con una clara orientación hacia resultados tangibles.
+
+Me especializo en la creación de sitios web personalizados y ofrezco mis servicios para aquellos que buscan una solución única y eficiente.
+ Si estás en la búsqueda de una página web o un sitio web a medida, estaré encantada de colaborar contigo.
+
+Mi objetivo principal es continuar creciendo como ingeniera de software profesional, 
+y estoy entusiasmada por explorar nuevas oportunidades alineadas con mis habilidades y experiencia. 
+No dudes en ponerte en contacto conmigo si ves una posibilidad de colaboración que pueda encajar con mis objetivos y aportar de manera significativa.
+ ¡Espero poder contribuir a tu proyecto o empresa!
+</Typography>
                 <br /><br />
                 </Grid>
       

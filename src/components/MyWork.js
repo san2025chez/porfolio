@@ -27,9 +27,9 @@ const MyWork = ({ title, dark, id }) => {
                       {title}
                     </Link>
                     <br/> 
-                    <Link href={git}  target="_blank" rel="noopener">
+                 {/*    <Link href={git}  target="_blank" rel="noopener">
                       Ir al Repositorio
-                    </Link>
+                    </Link> */}
                   </CardContent>
                 </Card>
               </Grid>

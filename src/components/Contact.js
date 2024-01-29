@@ -26,11 +26,11 @@ const Contact = ({title, dark, id}) => {
       <IconButton >
        <EmailIcon  fontSize="large" style={{ color: 'black' ,fontSize:'3rem'}}/>
       </IconButton></a> */}
-      <a  href="https://github.com/san2025chez" target="_blank" rel="noopener noreferrer">
+     {/*  <a  href="https://github.com/san2025chez" target="_blank" rel="noopener noreferrer">
       <IconButton   >
        <GitHubIcon  fontSize="large" style={{ color: 'black' ,fontSize:'3rem'}}/>
       </IconButton>
-      </a>
+      </a> */}
     </Grid>
 
   </Grid>

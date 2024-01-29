@@ -7,19 +7,16 @@ const mockData=[
     {
         title: "Prestamos Personales",
         image: personales ,
-        git:"https://github.com/san2025chez/landingprestamos",
-        link:"https://prestamosperico.com.ar/"
+        link:"https://san2025chez.github.io/landingprestamos/"
     },
     {
         title: "E-commerce",
         image: ecomerce ,
-        git:"https://github.com/san2025chez/backend-ecommerce",
-        link:"https://san2025chez.github.io/new-ecomerce/"
+        link:"https://productosnutricionales.com.ar"
     },
     {
         title: "Prestamos Personales",
         image: dash,
-        git:"https://github.com/san2025chez/Prestamos-Personales-Backend",
         link:"https://youtu.be/ASrncm_u3Ys"
     },
     {

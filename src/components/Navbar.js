@@ -66,7 +66,8 @@ const Navbar = () => {
             </Toolbar>
 
         </AppBar>
-        <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
+        <Drawer style={{color:'red'}} anchor="right" open={open} onClose={() => setOpen(false)}>
+        <div className={classes.sidebarWrapper}>
             <IconButton  onClick={() => setOpen(false)}>
                 <CancelIcon fontSize="large" className={classes.cancelicon}></CancelIcon>
             </IconButton>
@@ -81,7 +82,7 @@ const Navbar = () => {
                             activeClass = "active"
                             smooth={true}
                             duration={500}
-                            offset={-70}>
+                            offset={70}>
                                 <ListItem component="h5">
                                     <span>
                                         <ListItemIcon>
@@ -92,6 +93,7 @@ const Navbar = () => {
                                 </Link>
                         ))
                     }
+                    </div>
         </Drawer>
         </>
     )
@@ -121,7 +123,8 @@ const useStyles = makeStyles((theme) => ({
 ,
 menu:{
     [theme.breakpoints.down("sm")]:{
-     display: "none"
+     display: "none",
+ 
     },
     "& a": {
      color:'#228c55',
@@ -140,7 +143,7 @@ menubutton:{
     display: "none",
     [theme.breakpoints.down("sm")]:{
         display: "block",
-        color: "#9297b3",
+        color: "#00BFA5",
         position: "absolute",
         top: 0,
         right:10,
@@ -149,24 +152,31 @@ menubutton:{
 cancelicon:{
     color: "#9297b3",
     position: "absolute",
-    top: 0,
-    right: 10
+    top: 0
+    
 },
 sidebar:{
     width:"40vh",
     [theme.breakpoints.down("sm")]:{
-        width: "60vw"
+        width: "60vw",
+        backgroundColor:'#00BFA5'
     },
+   
     " & h5":{
         margin: theme.spacing(7,0,0,4),
         fontSize: "1.4rem",
         color:"#333",
         fontWeight: "bold"
     },
+  
 "& h5:hover":{
     color: "#9297b3",
     cursor:"pointer"
-}}
+}},
+sidebarWrapper: {
+    background: '#8fd3ba', // Set your desired background color (green in this case)
+    minHeight: '100vh', // Ensure the sidebar has at least the height of the viewport
+},
     
 
 }))

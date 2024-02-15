@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     maxWidth: 345,
   backgroundColor:'#8fd3ba',
-    minHeight: 275,
+    minHeight: 260,
     margin: theme.spacing(3),
     [theme.breakpoints.down('sm','xs')]: {
 minHeight:'210px'

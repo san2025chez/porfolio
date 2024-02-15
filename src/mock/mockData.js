@@ -3,6 +3,7 @@ import ecomerce from "../img/ecomerce.jpeg"
 import dash from "../img/dash.jpeg"
 import personales from "../img/personales.jpeg"
 import dashcommerce from "../img/dashcommerce.png"
+import ada from "../img/ada.png"
 const mockData=[
     {
         title: "Prestamos Personales",
@@ -23,6 +24,11 @@ const mockData=[
         title: "Dashboard",
         image: dashcommerce ,
         link:"https://www.youtube.com/watch?v=q3C8QBhPa9E"
+    },
+    {
+        title: "Ada Software",
+        image: ada ,
+        link:"https://adasoft.com.ar/"
     }
 ]
 export default mockData;

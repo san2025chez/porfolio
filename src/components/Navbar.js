@@ -130,7 +130,8 @@ menu:{
      color:'#228c55',
              fontSize: "1.4rem",
         fontWeight:"bold",
-        marginLeft: theme.spacing(3)
+        marginLeft: theme.spacing(3),
+       
     },
     "& a:hover":{
         cursor: "pointer",
@@ -164,7 +165,7 @@ sidebar:{
     },
    
     " & h5":{
-        margin: theme.spacing(2,0,0,4),
+        margin: theme.spacing(2,1,0,2),
         fontSize: "1rem",
         color:"#333",
         fontWeight: "bold"

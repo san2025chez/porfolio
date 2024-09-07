@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent, Typography, Grid } from '@mui/material';
 import { makeStyles } from '@mui/styles';
@@ -5,6 +6,9 @@ import { motion } from 'framer-motion';
 import { FaHtml5, FaReact, FaNodeJs, FaGitAlt, FaCss3Alt, FaTachometerAlt, FaDatabase, FaShoppingCart, FaDesktop } from 'react-icons/fa';
 import { GiSettingsKnobs } from 'react-icons/gi';
 import { SiTypescript } from 'react-icons/si';
+import { useTheme } from '@mui/material/styles';
+import { useMediaQuery } from '@mui/material';
+
 
 // Define estilos con makeStyles
 const useStyles = makeStyles((theme) => ({
@@ -102,54 +106,54 @@ const services = [
   { title: 'Consultoría en Arquitectura de Software', description: 'Ofrecemos asesoramiento experto para diseñar arquitecturas de software robustas y escalables que satisfagan tus necesidades actuales y futuras.', icon: <FaDatabase /> },
 ];
 
-const Services = ({title,id}) => {
+export const Services = ({ title, id }) => {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme?.breakpoints?.down('sm') || false); // Añadido manejo para tema nulo
 
   return (
     <div className={classes.section} id={id}>
-    <div className={classes.box}>
-      <Typography variant="h2" style={{ 
-        fontSize: '2rem', 
-        textAlign: 'center', 
-        fontFamily: 'Space Grotesk, sans-serif', 
-        fontWeight: 'bold',
-        color:'white', 
-        marginBottom: '32px', 
-        textTransform: 'uppercase' 
-      }}>
-        SERVICIOS
-      </Typography>
-      <Grid container spacing={3}>
-        {services.map((service, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index} className={classes.cardContainer}>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Card className={classes.card}>
-                <CardContent>
-                  <div className={classes.icon}>{service.icon}</div>
-                  <Typography variant="h5" className={classes.title}>
-                    {service.title}
-                  </Typography>
-                  <Typography variant="body2" style={{ 
-                    fontSize: '19px', // Reducido un punto de tamaño
-                    color: 'black', 
-                    textAlign: 'left', 
-                    fontFamily: 'Space Grotesk, sans-serif' // Aplica la fuente a todos las letras
-                  }}>
-                    {service.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </Grid>
-        ))}
-      </Grid>
-    </div>
+      <div className={classes.box}>
+        <Typography variant="h2" style={{ 
+          fontSize: '2rem', 
+          textAlign: 'center', 
+          fontFamily: 'Space Grotesk, sans-serif', 
+          fontWeight: 'bold',
+          color:'white', 
+          marginBottom: '32px', 
+          textTransform: 'uppercase' 
+        }}>
+          {title || 'SERVICIOS'}
+        </Typography>
+        <Grid container spacing={3}>
+          {services.map((service, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index} className={classes.cardContainer}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Card className={classes.card}>
+                  <CardContent>
+                    <div className={classes.icon}>{service.icon}</div>
+                    <Typography variant="h5" className={classes.title}>
+                      {service.title}
+                    </Typography>
+                    <Typography variant="body2" style={{ 
+                      fontSize: '19px', // Reducido un punto de tamaño
+                      color: 'black', 
+                      textAlign: 'left', 
+                      fontFamily: 'Space Grotesk, sans-serif' // Aplica la fuente a todos las letras
+                    }}>
+                      {service.description}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </Grid>
+          ))}
+        </Grid>
+      </div>
     </div>
   );
 };
-
-export default Services;

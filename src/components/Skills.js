@@ -5,9 +5,11 @@ import { } from '@mui/material/Grid';
 import { minHeight } from '@mui/system';
 import Technology from './Technologies';
 import Technologies from './Technologies';
+import { useTheme } from '@mui/styles';
 
 const Skills = ({ title, dark, id }) => {
   const classes = useStyles();
+  const theme = useTheme();
   return (
     <div className={`${classes.section} ${classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
@@ -29,7 +31,6 @@ const Skills = ({ title, dark, id }) => {
   )
 }
 const useStyles = makeStyles((theme) => ({
-
   section: {
     minHeight: "70vh",
     backgroundColor:"#1E2A38"
@@ -41,9 +42,12 @@ const useStyles = makeStyles((theme) => ({
   },
 
   sectioncontent:{
-    maxWidth:"90vw",
+    maxWidth:"100vw",
     margin: "0 auto",
-    padding: theme.spacing(5)
+    padding: theme.spacing(5),
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(2), // Ajusta el padding para dispositivos móviles
+    }
   }
   ,
   grid: {
@@ -52,12 +56,17 @@ const useStyles = makeStyles((theme) => ({
 
   },
   card: {
-  
-    margin: theme.spacing(2)
+    margin: theme.spacing(2),
+    [theme.breakpoints.down('sm')]: {
+      margin: theme.spacing(1), // Ajusta el margen para dispositivos móviles
+    }
   }
   ,
   miitem:{
-    marginBottom:"20px"
+    marginBottom:"20px",
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: "10px", // Ajusta el margen inferior para dispositivos móviles
+    }
   }
 
 

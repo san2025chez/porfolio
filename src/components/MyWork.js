@@ -1,83 +1,104 @@
-import React from 'react'
-import { makeStyles, Grid, Card, CardContent, CardMedia, Typography, Link } from "@material-ui/core";
+// MyWork.js
+import React, { useState } from 'react';
+import { makeStyles, Grid, Typography, Dialog, DialogContent, IconButton } from '@material-ui/core';
+import ProjectCard from './ProjectCard';
 import mockData from '../mock/mockData';
-import { } from '@mui/material/Grid';
-import { minHeight } from '@mui/system';
+import CloseIcon from '@material-ui/icons/Close';
 
-const MyWork = ({ title, dark, id }) => {
+const MyWork = ({ title, id }) => {
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleOpen = (project) => {
+    setSelectedProject(project);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedProject(null);
+  };
+
   return (
-    <div className={`${classes.section} ${classes.sectiondark}`}>
-      <div className={classes.sectioncontent} id={id}>
-        <Typography variant="h5" style={{ textAlign: 'center',fontWeight: 'bold' , color:'#228c55', fontSize:'2rem'} }>{title}</Typography>
-        <Grid container className={classes.grid}>
-          {
-            mockData.map(({ title, image, link,git }, index) => (
-              <Grid item key={index} xs={12} sm={6} md={4}>
-                <Card className={classes.card}>
-                  <CardMedia image={image} className={classes.caratula} titulo="miimagen" />
-                  <CardContent style={{padding: '0.5rem',   display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    '@media (maxWidth: 412px)': {
-      padding: '0.1rem',
-    }}}>
-                    <Link href={link}  target="_blank" rel="noopener">
-                      {title}
-                    </Link>
-                    <br/> 
-                 {/*    <Link href={git}  target="_blank" rel="noopener">
-                      Ir al Repositorio
-                    </Link> */}
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))
-          }
-        </Grid>
-      </div>
-
+    <div className={classes.section} id={id}>
+      <Typography variant="h5" className={classes.title}>
+        {title}
+      </Typography>
+      <Grid container spacing={3} className={classes.grid}>
+        {mockData.map((project, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              onOpen={() => handleOpen(project)}
+            />
+          </Grid>
+        ))}
+      </Grid>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        fullWidth
+        maxWidth="md" // Ajusta el tamaño máximo del popup
+        className={classes.dialog}
+      >
+        <DialogContent>
+          <IconButton edge="end" color="inherit" onClick={handleClose} className={classes.closeButton}>
+            <CloseIcon />
+          </IconButton>
+          {selectedProject && (
+            <div>
+              <Typography variant="h4" className={classes.dialogTitle}>
+                {selectedProject.title}
+              </Typography>
+              <Typography className={classes.dialogDescription}>
+                {selectedProject.description}
+              </Typography>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
-  )
-}
+  );
+};
+
 const useStyles = makeStyles((theme) => ({
-
   section: {
-    minHeight: "80vh",
+    padding: theme.spacing(4),
+    backgroundColor: '#1E2A38',
+    color: '#FFFFFF',
   },
-  sectiondark: {
-    backgroundColor:'#d2ede3',
-    background:"#263238",
-    color: "white"
+  title: {
+    textAlign: 'center',
+    fontWeight: 'bold',
+    marginBottom: theme.spacing(4),
+    fontSize: '2rem',
+    fontFamily: 'Space Grotesk, sans-serif', // Aplica la fuente a todos las letras
+    textTransform: 'uppercase', // Convierte la primera letra de cada palabra a mayúscula
   },
-
-  sectioncontent:{
-    maxWidth:"90vw",
-    margin: "0 auto",
-    padding: theme.spacing(5)
-  }
-  ,
   grid: {
-    marginTop: theme.spacing(10),
-  },
-  card: {
-    maxWidth: 345,
-  backgroundColor:'#8fd3ba',
-    minHeight: 260,
-    margin: theme.spacing(3),
-    [theme.breakpoints.down('sm','xs')]: {
-minHeight:'210px'
+    [theme.breakpoints.down('xs')]: {
+      margin: '0',
     },
   },
-  caratula:{
-    height: 0,
-    paddingTop:'56.25%'
+  dialog: {
+    '& .MuiDialog-paper': {
+      padding: theme.spacing(2),
+    },
+  },
+  closeButton: {
+    position: 'absolute',
+    right: theme.spacing(1),
+    top: theme.spacing(1),
+  },
+  dialogTitle: {
+    marginBottom: theme.spacing(2),
+  },
+  dialogDescription: {
+    fontSize: '1rem',
+  },
+}));
 
-  }
-
-
-
-}))
-
-export default MyWork
+export default MyWork;

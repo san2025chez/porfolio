@@ -1,144 +1,201 @@
-import React from 'react'
-import {Button, CardMedia, makeStyles,Typography,Card,CardContent, CardActions } from "@material-ui/core";
-import TypeWriteEffect from "react-typewriter-effect"
-import Avatar from '@material-ui/core/Avatar';
-import CVanesa from "../img/cvend.pdf";
-import portada from "../img/portada.webp"
-const About = ({title, dark, id}) => {
-    if (dark) {
-        console.log("ingreso about");
+import React, { useState, useEffect } from 'react';
+import { Typography, Card, CardContent, Grid, CardMedia } from "@material-ui/core";
+import { makeStyles } from '@material-ui/core/styles';
+import portada from "../img/original-ana.png";
+import { motion } from 'framer-motion';
+
+const About = ({ title, dark, id }) => {
+  const [fullStackText, setFullStackText] = useState('');
+  const [developerText, setDeveloperText] = useState('');
+  const [isTypingDeveloper, setIsTypingDeveloper] = useState(true);
+
+  const fullStack = "Software";
+  const developer = "Engineer";
+
+  useEffect(() => {
+    const typeFullStack = () => {
+      setFullStackText(fullStack.substring(0, fullStackText.length + 1));
+    };
+
+    if (fullStackText !== fullStack) {
+      setTimeout(typeFullStack, 100);
     }
-    const classes= useStyles();
+  }, [fullStackText]);
+
+  useEffect(() => {
+    const typeDeveloper = () => {
+      if (isTypingDeveloper) {
+        setDeveloperText(developer.substring(0, developerText.length + 1));
+        if (developerText === developer) {
+          setTimeout(() => setIsTypingDeveloper(false), 1000);
+        }
+      } else {
+        setDeveloperText(developer.substring(0, developerText.length - 1));
+        if (developerText === '') {
+          setTimeout(() => setIsTypingDeveloper(true), 1000);
+        }
+      }
+    };
+
+    const typingTimeout = setTimeout(typeDeveloper, 100);
+    return () => clearTimeout(typingTimeout);
+  }, [developerText, isTypingDeveloper]);
+
+  const classes = useStyles();
+
   return (
-    <div className={`${classes.section} ${ classes.sectiondark}`}>
-      <div className={classes.sectioncontent} id={id}>
- 
+    <div className={classes.section} id={id}>
+      <div className={classes.sectioncontent}>
         <Card className={classes.card}>
-
-
           <CardContent className={classes.cardcontent}>
-  
-            <TypeWriteEffect
-            text="Soy Vanesa Sanchez, Full-Stack Developer"
-            textStyle={{fontSize: "3rem", fontWeight: "700px", color:'#228c55'}}
-            startDelay={100}
-            
-            typeSpeed={100}
-            />
-
-
-
-       
-          
+            <Grid container spacing={3}>
+              <Grid item xs={12} sm={6} className={classes.textContainer}>
+                <Typography variant="h4" className={classes.title} style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: 'bold' }}>Soy Vanesa Sanchez</Typography>
+                <span className={classes.typingText}>
+                  {fullStackText} {developerText}
+                </span>
+                <Typography variant="h6" className={classes.description} style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                  Soy Ingeniera de Software, especialista en crear soluciones tecnológicas usando React, Node.js, y Nest.js,
+                  con un enfoque en inteligencia artificial y aplicaciones escalables. Me apasiona transformar ideas en productos digitales innovadores y eficientes.
+                  ¡Juntos, podemos impulsar tu proyecto!
+                </Typography>
+                <div className={classes.buttonContainer}>
+                  <motion.button
+                    whileHover={{ scale: 1.1, backgroundColor: '#00BFA5' }}
+                    whileTap={{ scale: 0.9 }}
+                    initial={{ x: '-100%', opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className={classes.contactButton}
+                  >
+                    Contactarme
+                  </motion.button>
+                </div>
+              </Grid>
+              <Grid item xs={12} sm={6} className={classes.imageContainer}>
+                <CardMedia
+                  className={classes.media}
+                  image={portada}
+                  title="Vanesa Sanchez"
+                  alt="Imagen de Vanesa Sanchez"
+                />
+              </Grid>
+            </Grid>
           </CardContent>
-          <CardActions>
-            <Button className={classes.pdfbutton} variant="contained">
-              <a href={CVanesa}  download>
-            <h4>  Dowload CV</h4>
-              </a>
-              </Button>
-          </CardActions>
         </Card>
       </div>
-
-        </div>
-  )
-}
-
+    </div>
+  );
+};
 
 const useStyles = makeStyles((theme) => ({
-
-        section:{
-            minHeight:"90vh",
-            backgroundColor: "#263238",
-
-        },
-        sectiondark:{
-          backgroundSize: 'cover',
-          background: "#00BFA5",
-      /*     "#607d8b", */
-          color:"#00BFA5",
-          /* backgroundImage:  `url(${portada})`,
-          backgroundRepeat: 'no-repeat', */
-          backgroundColor:'#d2ede3'
-          /* backgroundColor:'#4DD0B5' */
-   
-            
-        },
-        sectioncontent:{
-          maxWidth: "80vw",
-          margin: "0 auto",
-      
-   
-        },
-        rounded: {
-          borderRadius: '100%',
-          width:'20%',
-          height:'50%'
-        },
-        card:{
-         // backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/despensa-c8032.appspot.com/o/Crop_azul.webp?alt=media&token=d322d53d-8c8f-45f3-9ef9-5c6fa96c01bf")',
-
-         //'url(${"../img/portada.webp"})', 
-         backgroundPosition: 'center',
-         border: 'none',
-         variant:'elevation',
-         boxShadow: 'none',
-         outline: 'none',
-       
-
-          backgroundSize: 'cover',
-     height: "85vh",
-     backgroundColor:"transparent",
-     display:"flex",
-    
-     position: "relative",
-     [theme.breakpoints.down('sm')]: {
-      maxWidth: 600,
-      maxHeight:700
+  section: {
+    minHeight: "90vh",
+    backgroundColor: "#1E2A38",
+    paddingTop: '80px',
+    position: 'relative',
+    fontFamily: 'Open Sans, sans-serif',
+  },
+  sectioncontent: {
+    maxWidth: "90vw",
+    margin: "0 auto",
+    padding: '0 16px',
+    [theme.breakpoints.down('sm')]: {
+      padding: '0 8px',
     },
-        },
-        cardcontent:{
-          display: 'flex', /* Convierte al contenedor en un contenedor flexible */
-          justifyContent: 'center', /* Centra el contenido horizontalmente */
-          alignItems: 'center',
-        },
-        media:{
-          width: "350px",
-          objectFit:"cover",
-          height: "auto",
-          borderRadius:"10px",
-          [theme.breakpoints.down('sm')]: {
-            maxWidth: 400,
-            maxHeight:500
-          }
-        },
-        pdfbutton:{
-          position:"absolute",
-          bottom: "0.5rem",
-          right:"4rem",
-          [theme.breakpoints.down("sm")]:{
-bottom:"2rem",
-right: "1rem"
-          },
-          backgroundColor: "#228c55",
-          padding: theme.spacing(3),
-          "&: hover": {
-            backgroundColor:"#fff"
+  },
+  textContainer: {
+    marginTop: '50px',
+    paddingTop: '40px',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '20px',
+      marginBottom: '30px',
+      paddingBottom: '30px',
+      paddingTop: '20px',
+    },
+  },
+  card: {
+    backgroundColor: "transparent",
+    boxShadow: 'none',
+    border: 'none',
+    display: "flex",
+    flexDirection: "column",
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: "column",
+    },
+  },
+  cardcontent: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center',
+    [theme.breakpoints.down('sm')]: {
+      padding: '20px',
+    },
+  },
+  title: {
+    marginBottom: '20px',
+    color: '#FFFFFF',
+    fontSize: '2.5rem',
+    fontWeight: '700',
+    textTransform: 'uppercase',
+    fontFamily: 'Space Grotesk, sans-serif',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '2.5rem',
+    },
+  },
+  typingText: {
+    fontSize: "3rem",
+    fontWeight: "700",
+    color: '#FFD700',
+    textTransform: 'uppercase',
+    marginBottom: '20px',
+    fontFamily: 'Space Grotesk, sans-serif',
+  },
+  description: {
+    marginTop: '30px',
+    color: '#FFFFFF',
+    fontSize: '1.2rem',
+    lineHeight: '1.6',
+    fontFamily: 'Space Grotesk, sans-serif', // Aplicación de la fuente a la descripción
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1rem',
+    },
+  },
+  buttonContainer: {
+    marginTop: '30px',
+  },
+  contactButton: {
+    color: '#FFFFFF',
+    backgroundColor: '#00BFA5',
+    borderRadius: '20px',
+    padding: '10px 20px',
+    fontSize: '16px',
+    border: 'none',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s, transform 0.2s',
+    '&:hover': {
+      backgroundColor: '#007ACC',
+    },
+  },
+  imageContainer: {
+    position: 'relative',
+    width: '100%',
+    height: '600px',
+    [theme.breakpoints.down('sm')]: {
+      height: '350px',
+    },
+    marginTop: '-20px',
+  },
+  media: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    borderRadius: "10px",
+  },
+}));
 
-          },
-          "& a":{
-            color:"#fff",
-            textDecoration: "none",
-            fontWeight:9000
-          },
-          "& a: hover":{
-            color: "tomato"
-          }
-        }
-  
- 
-  
-  }))
-
-export default About
+export default About;

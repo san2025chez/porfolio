@@ -1,76 +1,94 @@
-import React from 'react'
-import { makeStyles, Typography} from "@material-ui/core";
-import { IconButton, Grid } from '@material-ui/core';
+import React from 'react';
+import { makeStyles, Typography, IconButton, Grid, Container } from '@material-ui/core';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-
-import { Link} from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
-const Contact = ({title, dark, id}) => {
-    const classes= useStyles();
+import TelegramIcon from '@mui/icons-material/Telegram';
+
+const Contact = () => {
+  const classes = useStyles();
+
   return (
-    <div className={`${classes.section} ${classes.sectiondark}`}>
-    <div className={classes.sectioncontent} id={id}>
-    <Typography variant="h5" style={{ textAlign: 'center' , fontWeight: 'bold' , color:'#228c55', fontSize:'2rem'}}>{title}</Typography>
-    <Grid container spacing={2} alignItems="center" className={classes.grid}>
-    <Grid item>
+  
+      <Container className={classes.container}>
+        
+        <Grid container spacing={2} justifyContent="center" className={classes.grid}>
+          <Grid item>
+            <a href='https://api.whatsapp.com/send?phone=543884299868' target="_blank" rel="noopener noreferrer">
+              <IconButton className={classes.iconButton}>
+                <WhatsAppIcon fontSize="inherit" />
+              </IconButton>
+            </a>
+          </Grid>
+          <Grid item>
+            <a href="https://www.linkedin.com/in/anamariavanesasanchez/" target="_blank" rel="noopener noreferrer">
+              <IconButton className={classes.iconButton}>
+                <LinkedInIcon fontSize="inherit" />
+              </IconButton>
+            </a>
+          </Grid>
+          <Grid item>
+            <a href="mailto:example@example.com" target="_blank" rel="noopener noreferrer">
+              <IconButton className={classes.iconButton}>
+                <EmailIcon fontSize="inherit" />
+              </IconButton>
+            </a>
+          </Grid>
+          <Grid item>
+            <a href="https://github.com/san2025chez" target="_blank" rel="noopener noreferrer">
+              <IconButton className={classes.iconButton}>
+                <GitHubIcon fontSize="inherit" />
+              </IconButton>
+            </a>
+          </Grid>
+          <Grid item>
+            <a href="https://t.me/yourtelegramusername" target="_blank" rel="noopener noreferrer">
+              <IconButton className={classes.iconButton}>
+                <TelegramIcon fontSize="inherit" />
+              </IconButton>
+            </a>
+          </Grid>
+        </Grid>
+      </Container>
    
-    <a href='https://api.whatsapp.com/send?phone=543884299868' target="_blank" rel="noopener noreferrer">
-    <IconButton > <WhatsAppIcon fontSize="large" style={{color: '#00e676' ,fontSize:'3rem'}}/></IconButton>
-      </a>
-     <a href="https://www.linkedin.com/in/anamariavanesasanchez/" target="_blank" rel="noopener noreferrer"> <IconButton >
-     <LinkedInIcon  fontSize="large" style={{color: '#2e3181' ,fontSize:'3rem'}}/>
-      </IconButton ></a>
-   {/*    <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
-      <IconButton >
-       <EmailIcon  fontSize="large" style={{ color: 'black' ,fontSize:'3rem'}}/>
-      </IconButton></a> */}
-     {/*  <a  href="https://github.com/san2025chez" target="_blank" rel="noopener noreferrer">
-      <IconButton   >
-       <GitHubIcon  fontSize="large" style={{ color: 'black' ,fontSize:'3rem'}}/>
-      </IconButton>
-      </a> */}
-    </Grid>
-
-  </Grid>
-  </div>
-  </div>
-);
-}
-
-
-
-
-
-
-
+  );
+};
 
 const useStyles = makeStyles((theme) => ({
-
-        section:{
-            minHeight:"30vh",
-            backgroundColor:"#263238",
-        },
-        sectiondark:{
-          backgroundColor:'#d2ede3',
-            color:"#fff",
-           
-        },
-        grid: {
-   paddingTop:'50px',
-              display: 'flex',
+  section: {
+    minHeight: "30vh",
+    backgroundColor: "#1E2A38",
+    padding: theme.spacing(4),
+  },
+  sectiondark: {
+    color: "#FFFFFF",
+  },
+  container: {
+    textAlign: 'center',
+  },
+  title: {
+    marginBottom: theme.spacing(3),
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+    fontSize: '2rem',
+  },
+  grid: {
+    paddingTop: theme.spacing(2),
+    display: 'flex',
     justifyContent: 'center',
+    flexWrap: 'wrap',
+  },
+  iconButton: {
+    color: '#FFFFFF',
+    fontSize: '2.5rem',
+    '&:hover': {
+      color: '#00BFA5', // Color de resaltado
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '2rem', // Tamaño de los iconos para dispositivos móviles
+    },
+  },
+}));
 
-        },
-        sectioncontent:{
-          maxWidth:"90vw",
-          margin: "0 auto",
-    
-       
-        }
-  
-   
-  
-  }))
-export default Contact
+export default Contact;

@@ -4,6 +4,8 @@ import MyWork from './components/MyWork';
 import Contact from './components/Contact';
 import About from './components/About'
 import Skills from "./components/Skills";
+import ContactForm from './components/ContactForm'
+import Services from './components/Services'
 
 function App() {
 
@@ -16,8 +18,11 @@ function App() {
       <Navbar></Navbar>
       <About title="Inicio" id="about"/>
       <Skills title="Sobre Mi" id="skill" dark={"#00BFA5"}/>
+     
       <MyWork title="Trabajos" id="work" dark={false}/>
-      <Contact title="Contactos" id="contact" dark={true} />
+       <Services title="Servicios" id="service" dark={true}/>
+      <ContactForm title="Contactos" id="contact" dark={true}/>
+      <Contact  />
     </div>
   );
 }
@@ -25,7 +30,7 @@ function App() {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-
+backgroundColor:'#1E2A38'
   }
 
 }))

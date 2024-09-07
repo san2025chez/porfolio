@@ -3,7 +3,7 @@ import ecomerce from "../img/ecomerce.jpeg"
 import dash from "../img/dash.jpeg"
 import personales from "../img/personales.jpeg"
 import dashcommerce from "../img/dashcommerce.png"
-import ada from "../img/ada.png"
+import ada from "../img/newada.png"
 const mockData=[
     {
         title: "Prestamos Personales",

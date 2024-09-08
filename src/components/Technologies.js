@@ -40,10 +40,11 @@ export default function Technologies() {
                 <Grid item xs={12}>
                     <Typography 
                         style={{ 
-                            fontSize: '20px', 
+                            fontSize: window.innerWidth > 600 ? '20px' : '16px', 
                             color: '#FFFFFF', 
                             textAlign: 'justify', 
-                            fontFamily: 'Space Grotesk, sans-serif' // Aplica la fuente a todos las letras
+                            fontFamily: 'Space Grotesk, sans-serif', // Aplica la fuente a todos las letras
+                            fontWeight: window.innerWidth > 600 ? 'normal' : 'lighter' // Ajusta el peso de la fuente para dispositivos móviles
                         }}
                     >
                         ¡Hola! Soy Vanesa Sanchez, Ingeniera Informática con una sólida experiencia en el desarrollo de proyectos

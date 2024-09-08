@@ -112,6 +112,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '30px',
       paddingBottom: '30px',
       paddingTop: '20px',
+      textAlign: 'left', // Alineación a la izquierda para dispositivos móviles
     },
   },
   card: {
@@ -131,6 +132,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     [theme.breakpoints.down('sm')]: {
       padding: '20px',
+      textAlign: 'left', // Alineación a la izquierda para dispositivos móviles
     },
   },
   title: {
@@ -141,7 +143,8 @@ const useStyles = makeStyles((theme) => ({
     textTransform: 'uppercase',
     fontFamily: 'Space Grotesk, sans-serif',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '2.5rem',
+      fontSize: '2.0rem',
+      textAlign: 'left', // Alineación a la izquierda para dispositivos móviles
     },
   },
   typingText: {
@@ -151,6 +154,11 @@ const useStyles = makeStyles((theme) => ({
     textTransform: 'uppercase',
     marginBottom: '20px',
     fontFamily: 'Space Grotesk, sans-serif',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.8rem', // Reducido el tamaño de la fuente para dispositivos móviles
+      textAlign: 'left', // Alineación a la izquierda para dispositivos móviles
+      fontWeight: '500', // Reducido el peso de la fuente para dispositivos móviles
+    },
   },
   description: {
     marginTop: '30px',
@@ -160,10 +168,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Space Grotesk, sans-serif', // Aplicación de la fuente a la descripción
     [theme.breakpoints.down('sm')]: {
       fontSize: '1rem',
+      textAlign: 'left', // Alineación a la izquierda para dispositivos móviles
+      fontWeight: '400', // Reducido el peso de la fuente para dispositivos móviles
     },
   },
   buttonContainer: {
     marginTop: '30px',
+    textAlign: 'center', // Alineación al centro para dispositivos móviles
   },
   contactButton: {
     color: '#FFFFFF',
@@ -184,6 +195,7 @@ const useStyles = makeStyles((theme) => ({
     height: '600px',
     [theme.breakpoints.down('sm')]: {
       height: '350px',
+      textAlign: 'center', // Alineación al centro para dispositivos móviles
     },
     marginTop: '-20px',
   },

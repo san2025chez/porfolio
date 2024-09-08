@@ -95,6 +95,9 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '80px',
     position: 'relative',
     fontFamily: 'Open Sans, sans-serif',
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: '40px', // Reducido el espacio entre el navbar y el contenido para dispositivos móviles
+    },
   },
   sectioncontent: {
     maxWidth: "90vw",

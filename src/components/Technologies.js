@@ -40,7 +40,7 @@ export default function Technologies() {
                 <Grid item xs={12}>
                     <Typography 
                         style={{ 
-                            fontSize: window.innerWidth > 600 ? '20px' : '16px', 
+                            fontSize: window.innerWidth > 600 ? '21px' : '16px', // Ajusta el tamaño de la fuente para dispositivos de escritorio
                             color: '#FFFFFF', 
                             textAlign: 'justify', 
                             fontFamily: 'Space Grotesk, sans-serif', // Aplica la fuente a todos las letras

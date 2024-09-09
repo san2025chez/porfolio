@@ -105,22 +105,9 @@ const Navbar = () => {
 const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: '#1E2A38', // Color de fondo del Navbar
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 999,
-        [theme.breakpoints.up("md")]: {
-            boxShadow: "none",
-            "&::before": {
-                content: '""',
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                width: "100%",
-                height: "1px",
-                backgroundColor: "transparent",
-            }
-        }
+      
+     
+ 
 
     },
     toolbar: {

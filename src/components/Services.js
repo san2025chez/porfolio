@@ -140,7 +140,7 @@ export const Services = ({ title, id }) => {
                       {service.title}
                     </Typography>
                     <Typography variant="body2" style={{ 
-                      fontSize: '19px', // Reducido un punto de tamaño
+                      fontSize: '15px', // Reducido un punto de tamaño
                       color: 'black', 
                       textAlign: 'left', 
                       fontFamily: 'Space Grotesk, sans-serif' // Aplica la fuente a todos las letras

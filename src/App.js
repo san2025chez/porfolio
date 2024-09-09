@@ -34,12 +34,18 @@ function App() {
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: '#1E2A38',
-   
+    minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
     margin: 0,
     padding: 0,
-  
+    [theme.breakpoints.down('xs')]: {
+      // Estilos específicos para dispositivos móviles
+      backgroundColor: '#1E2A38',
+      margin: 0,
+      padding: 0,
+    },
+ 
   },
 }));
 

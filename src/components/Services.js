@@ -85,10 +85,10 @@ export const Services = ({ title, id }) => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 console.log("ingreso a servicios");
   return (
-        <div className={`${classes.box} ${classes.sectiondark}`} id={id}>
 
+    <div className={classes.box} id={id}>
       <Typography variant="h5" className={classes.sectionTitle}>
-        {title }
+        {title || 'SERVICIOS'}
       </Typography>
       <Grid container spacing={3}>
         {services.map((service, index) => (

@@ -110,13 +110,7 @@ const useStyles = makeStyles((theme) => ({
  
 
     },
-    toolbar: {
-        display: "flex",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        backgroundColor: "#1E2A38", // Color de fondo del Navbar
 
-    },
     logo: {
         height: "4rem",
         objectFit: "contain",

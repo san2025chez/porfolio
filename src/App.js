@@ -34,23 +34,12 @@ function App() {
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: '#1E2A38',
-    minHeight: '100vh',
+   
     display: 'flex',
     flexDirection: 'column',
     margin: 0,
     padding: 0,
-    [theme.breakpoints.down('xs')]: {
-      // Estilos específicos para dispositivos móviles
-      backgroundColor: '#1E2A38',
-      margin: 0,
-      padding: 0,
-    },
-    [theme.breakpoints.up('md')]: {
-      // Estilos específicos para dispositivos de escritorio
-      backgroundColor: '#1E2A38', // Elimina la capa de color azul marino
-      margin: 0,
-      padding: 0,
-    },
+  
   },
 }));
 

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, Typography, Grid } from '@mui/material';
 import { makeStyles } from '@mui/styles';
@@ -9,91 +8,65 @@ import { SiTypescript } from 'react-icons/si';
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
 
-
 // Define estilos con makeStyles
 const useStyles = makeStyles((theme) => ({
   card: {
-    backgroundColor: '#1E2A38',
+    backgroundColor: '#2E3A59', // Color de fondo de la tarjeta
     color: '#FFFFFF',
-    borderRadius: '12px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+    borderRadius: '16px',
+    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.3)',
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
     '&:hover': {
-      transform: 'translateY(-10px)',
-      boxShadow: '0 8px 16px rgba(0, 0, 0, 0.3)',
+      transform: 'translateY(-8px)',
+      boxShadow: '0 12px 24px rgba(0, 0, 0, 0.4)',
     },
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    height: '100%', // Asegura que las tarjetas tengan el mismo tamaño
-    fontFamily: 'Space Grotesk, sans-serif', // Aplica la fuente a las tarjetas
-    margin: '5px', // Añade espacio adicional entre las tarjetas y los bordes de la ventana
+    height: '100%', 
+    margin: '10px',
+    padding: '16px',
+    fontFamily: 'Space Grotesk, sans-serif',
   },
   title: {
-    fontSize: '1.5rem',
+    fontSize: '2rem',
+    textAlign:'center',
+    fontFamily: 'Space Grotesk, sans-serif',
     fontWeight: 'bold',
-    marginBottom: '1rem',
+    margin: '0.5rem 0 32px',
     color: '#00BFA5',
-    fontFamily: 'Space Grotesk, sans-serif', // Aplica la fuente a los títulos
   },
   description: {
-    fontSize: '0.9rem', // Reducido un punto de tamaño
-    lineHeight: '1.6',
-    fontFamily: 'Space Grotesk, sans-serif', // Aplica la fuente a las descripciones
-    style: { 
-      fontSize: '15px', // Reducido un punto de tamaño
-      color: '#FFFFFF', 
-      textAlign: 'justify', 
-      fontFamily: 'Space Grotesk, sans-serif' // Aplica la fuente a todos las letras
-    },
+    fontSize: '0.9rem',
+    lineHeight: '1.5',
+    color: 'black',
+    fontFamily:'Space Grotesk, sans-serif',
+    textAlign: 'center',
   },
   icon: {
     fontSize: '3rem',
     color: '#00BFA5',
-    margin: 'auto',
-    display: 'block',
-    fontFamily: 'Space Grotesk, sans-serif', // Aplica la fuente a los iconos
+    marginBottom: '1rem',
   },
   box: {
-    padding: '16px 22px', // Añade espacio adicional a los lados izquierdo y derecho
+    padding: '24px',
     backgroundColor: '#1E2A38',
     minHeight: '100vh',
-    fontFamily: 'Space Grotesk, sans-serif', // Aplica la fuente al contenedor
   },
   cardContainer: {
     padding: '8px',
     textAlign: 'center',
-    flex: '1 1 0', // Permite que las tarjetas se ajusten al tamaño del contenedor
-    fontFamily: 'Space Grotesk, sans-serif', // Aplica la fuente al contenedor de tarjetas
+    flex: '1 1 0',
   },
   sectionTitle: {
     textAlign: 'center',
-    fontWeight: 'bold',
-    marginBottom: '2rem', // Ajustado a un valor numérico
     fontSize: '2rem',
-    fontFamily: 'Space Grotesk, sans-serif', // Aplica la fuente a los títulos de sección
-    textTransform: 'uppercase',
-    color: '#FFFFFF',
-    marginTop: '2rem', // Ajustado a un valor numérico
-  },
-  serviciosTitle: {
-    textAlign: 'center',
+    fontFamily: 'Space Grotesk, sans-serif',
     fontWeight: 'bold',
-    fontSize: '2rem',
-    fontFamily: 'Space Grotesk, sans-serif', // Aplica la fuente a los títulos de servicios
-    textTransform: 'uppercase',
-    color: '#FFFFFF',
-    marginBottom: '2rem', // Ajustado a un valor numérico
-  },
-  // Estilos adicionales para el título "Servicios"
-  servicios: {
-    fontSize: '2rem',
-    textAlign: 'center',
-    fontFamily: 'Space Grotesk, sans-serif', // Aplica la fuente al título "Servicios"
-    fontWeight: 'bold',
+    color:'white',
     marginBottom: '32px',
     textTransform: 'uppercase',
-  },
+  }
 }));
 
 const services = [
@@ -109,51 +82,36 @@ const services = [
 export const Services = ({ title, id }) => {
   const classes = useStyles();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme?.breakpoints?.down('sm') || false); // Añadido manejo para tema nulo
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <div className={classes.section} id={id}>
-      <div className={classes.box}>
-        <Typography variant="h2" style={{ 
-          fontSize: '2rem', 
-          textAlign: 'center', 
-          fontFamily: 'Space Grotesk, sans-serif', 
-          fontWeight: 'bold',
-          color:'white', 
-          marginBottom: '32px', 
-          textTransform: 'uppercase' 
-        }}>
-          {title || 'SERVICIOS'}
-        </Typography>
-        <Grid container spacing={3}>
-          {services.map((service, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index} className={classes.cardContainer}>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Card className={classes.card}>
-                  <CardContent>
-                    <div className={classes.icon}>{service.icon}</div>
-                    <Typography variant="h5" className={classes.title}>
-                      {service.title}
-                    </Typography>
-                    <Typography variant="body2" style={{ 
-                      fontSize: '15px', // Reducido un punto de tamaño
-                      color: 'black', 
-                      textAlign: 'left', 
-                      fontFamily: 'Space Grotesk, sans-serif' // Aplica la fuente a todos las letras
-                    }}>
-                      {service.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </Grid>
-          ))}
-        </Grid>
-      </div>
+    <div className={classes.box} id={id}>
+      <Typography variant="h5" className={classes.sectionTitle}>
+        {title}
+      </Typography>
+      <Grid container spacing={3}>
+        {services.map((service, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index} className={classes.cardContainer}>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Card className={classes.card}>
+                <CardContent>
+                  <div className={classes.icon}>{service.icon}</div>
+                  <Typography variant="h5" className={classes.title}>
+                    {service.title}
+                  </Typography>
+                  <Typography className={classes.description}>
+                    {service.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 };

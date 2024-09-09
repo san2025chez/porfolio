@@ -48,13 +48,13 @@ const About = ({ title, dark, id }) => {
       <div className={classes.sectioncontent}>
         <Card className={classes.card}>
           <CardContent className={classes.cardcontent}>
-            <Grid container spacing={3}>
+            <Grid container spacing={3} style={{ minHeight: "80vh" }}>
               <Grid item xs={12} sm={6} className={classes.textContainer}>
-                <Typography variant="h4" className={classes.title} style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: 'bold' }}>Soy Vanesa Sanchez</Typography>
+                <Typography variant="h4" className={classes.title}>Soy Vanesa Sanchez</Typography>
                 <span className={classes.typingText}>
                   {fullStackText} {developerText}
                 </span>
-                <Typography variant="h6" className={classes.description} style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                <Typography variant="h6" className={classes.description}>
                   Soy Ingeniera de Software, especialista en crear soluciones tecnológicas usando React, Node.js, y Nest.js,
                   con un enfoque en inteligencia artificial y aplicaciones escalables. Me apasiona transformar ideas en productos digitales innovadores y eficientes.
                   ¡Juntos, podemos impulsar tu proyecto!
@@ -72,7 +72,7 @@ const About = ({ title, dark, id }) => {
                   </motion.button>
                 </div>
               </Grid>
-              <Grid item xs={12} sm={6} className={classes.imageContainer}>
+              <Grid item xs={12} sm={6} className={classes.imageContainer} style={{ marginTop: '20px', '@media (max-width: 600px)': { marginTop: '40px' } }}>
                 <CardMedia
                   className={classes.media}
                   image={portada}
@@ -90,13 +90,11 @@ const About = ({ title, dark, id }) => {
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    minHeight: "90vh",
     backgroundColor: "#1E2A38",
-    paddingTop: '80px',
-    position: 'relative',
+    paddingTop: '50px',
     fontFamily: 'Open Sans, sans-serif',
     [theme.breakpoints.down('sm')]: {
-      paddingTop: '40px', // Reducido el espacio entre el navbar y el contenido para dispositivos móviles
+      paddingTop: '30px',
     },
   },
   sectioncontent: {
@@ -115,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '30px',
       paddingBottom: '30px',
       paddingTop: '20px',
-      textAlign: 'left', // Alineación a la izquierda para dispositivos móviles
+      textAlign: 'left',
     },
   },
   card: {
@@ -135,7 +133,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     [theme.breakpoints.down('sm')]: {
       padding: '20px',
-      textAlign: 'left', // Alineación a la izquierda para dispositivos móviles
+      textAlign: 'left',
     },
   },
   title: {
@@ -147,7 +145,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Space Grotesk, sans-serif',
     [theme.breakpoints.down('sm')]: {
       fontSize: '2.0rem',
-      textAlign: 'left', // Alineación a la izquierda para dispositivos móviles
+      textAlign: 'left',
     },
   },
   typingText: {
@@ -158,9 +156,9 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '20px',
     fontFamily: 'Space Grotesk, sans-serif',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1.8rem', // Reducido el tamaño de la fuente para dispositivos móviles
-      textAlign: 'left', // Alineación a la izquierda para dispositivos móviles
-      fontWeight: '500', // Reducido el peso de la fuente para dispositivos móviles
+      fontSize: '1.8rem',
+      textAlign: 'left',
+      fontWeight: '500',
     },
   },
   description: {
@@ -168,16 +166,16 @@ const useStyles = makeStyles((theme) => ({
     color: '#FFFFFF',
     fontSize: '1.2rem',
     lineHeight: '1.6',
-    fontFamily: 'Space Grotesk, sans-serif', // Aplicación de la fuente a la descripción
+    fontFamily: 'Space Grotesk, sans-serif',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1rem',
-      textAlign: 'left', // Alineación a la izquierda para dispositivos móviles
-      fontWeight: '400', // Reducido el peso de la fuente para dispositivos móviles
+      textAlign: 'left',
+      fontWeight: '400',
     },
   },
   buttonContainer: {
     marginTop: '30px',
-    textAlign: 'center', // Alineación al centro para dispositivos móviles
+    textAlign: 'center',
   },
   contactButton: {
     color: '#FFFFFF',
@@ -193,23 +191,25 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   imageContainer: {
-    position: 'relative',
     width: '100%',
-    height: '600px',
+    display: 'flex',
+    justifyContent: 'center',
     [theme.breakpoints.down('sm')]: {
-      height: '350px',
-      textAlign: 'center', // Alineación al centro para dispositivos móviles
+      textAlign: 'center',
+      width: '100%',
     },
-    marginTop: '-20px',
   },
   media: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
+    width: '80%',
+    height: 'auto',
+    maxHeight: '600px',
     objectFit: 'cover',
     borderRadius: "10px",
+    [theme.breakpoints.down('sm')]: {
+      height: '300px',
+      maxHeight: '600px',
+      width: '80%',
+    },
   },
 }));
 

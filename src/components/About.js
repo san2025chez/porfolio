@@ -61,8 +61,7 @@ const About = ({ title, dark, id }) => {
                   {fullStackText} {developerText}
                 </span>
                 <Typography variant="h6" className={classes.description}>
-                  Soy Ingeniera de Software, especialista en crear soluciones tecnológicas usando React, Node.js, y Nest.js,
-                  con un enfoque en inteligencia artificial y aplicaciones escalables. Me apasiona transformar ideas en productos digitales innovadores y eficientes.
+                  Soy Ingeniera de Software, especialista en crear soluciones tecnológicas usando nuevas tecnlogias. Me apasiona transformar ideas en productos digitales innovadores y eficientes.
                   ¡Juntos, podemos impulsar tu proyecto!
                 </Typography>
                 <div className={classes.buttonContainer}>
@@ -216,7 +215,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       height: '300px',
       maxHeight: '600px',
-      width: '80%',
+      width: '100%',
     },
   },
 }));

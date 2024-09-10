@@ -47,8 +47,15 @@ export default function Technologies() {
                             fontWeight: window.innerWidth > 600 ? 'normal' : 'lighter' // Ajusta el peso de la fuente para dispositivos móviles
                         }}
                     >
-                        ¡Hola! Soy Vanesa Sanchez, Ingeniera Informática con una sólida experiencia en el desarrollo de proyectos
-                        de software. Mi enfoque curioso y creativo se combina con una clara orientación hacia resultados tangibles...
+                      ¡Hola! Soy Vanesa Sánchez, Ingeniera en Informática y 
+                      Desarrolladora Full-Stack con más de 3 años de experiencia en el desarrollo de 
+                      sistemas y aplicaciones. Me especializo en crear soluciones innovadoras y eficientes
+                       utilizando nuevas tecnologías. Mi capacidad analítica me permite resolver problemas
+                        de manera efectiva, y siempre busco mejorar mis habilidades para enfrentar nuevos desafíos.
+                         Si necesitas digitalizar tu negocio, desarrollar un nuevo proyecto o
+                          simplemente ofrecer soluciones tecnológicas, estoy disponible para ayudarte.
+                          
+                        ¡Estoy emocionada de colaborar contigo y hacer realidad tus ideas!
                     </Typography>
                     <br /><br />
                 </Grid>
@@ -65,7 +72,7 @@ export default function Technologies() {
                             <motion.div
                                 initial={{ rotateY: 0 }} // Estado inicial
                                 animate={{ rotateY: 360 }} // Rotación a lo largo del eje Y
-                                transition={{ duration: 2, repeat: Infinity }} // Animación continua
+                                transition={{ duration: 5, repeat: Infinity }} // Animación continua
                                 style={{ transformOrigin: 'center' }} // Establece el centro de rotación
                             >
                                 <CardMedia image={tech.img} className={classes.image} />

@@ -28,13 +28,7 @@ const Contact = () => {
               </IconButton>
             </a>
           </Grid>
-          <Grid item>
-            <a href="mailto:example@example.com" target="_blank" rel="noopener noreferrer">
-              <IconButton className={classes.iconButton}>
-                <EmailIcon fontSize="inherit" />
-              </IconButton>
-            </a>
-          </Grid>
+      
           <Grid item>
             <a href="https://github.com/san2025chez" target="_blank" rel="noopener noreferrer">
               <IconButton className={classes.iconButton}>

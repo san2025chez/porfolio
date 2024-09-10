@@ -8,6 +8,7 @@ const mockData=[
     {
         title: "Prestamos Personales",
         image: personales ,
+        description:'Sistema de Registros de prestamos personales.Tecnologias utilizadas: React-Node-Nest-postgres ',
         link:"https://san2025chez.github.io/landingprestamos/"
     },
     {

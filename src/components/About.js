@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import portada from "../img/original-ana.png";
 import { motion } from 'framer-motion';
 
+
 const About = ({ title, dark, id }) => {
   const [fullStackText, setFullStackText] = useState('');
   const [developerText, setDeveloperText] = useState('');
@@ -100,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '50px',
     fontFamily: 'Open Sans, sans-serif',
     [theme.breakpoints.down('sm')]: {
-      paddingTop: '30px',
+      paddingTop: '80px',
     },
   },
   sectioncontent: {

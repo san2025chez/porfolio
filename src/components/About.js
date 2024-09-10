@@ -11,6 +11,7 @@ const About = ({ title, dark, id }) => {
 
   const fullStack = "Software";
   const developer = "Engineer";
+  const whatsappLink = "https://wa.link/2ogmx1"; // Cambia este enlace por el tuyo
 
   useEffect(() => {
     const typeFullStack = () => {
@@ -41,6 +42,10 @@ const About = ({ title, dark, id }) => {
     return () => clearTimeout(typingTimeout);
   }, [developerText, isTypingDeveloper]);
 
+  const handleClick = () => {
+    window.open(whatsappLink, '_blank');
+  };
+
   const classes = useStyles();
 
   return (
@@ -67,6 +72,7 @@ const About = ({ title, dark, id }) => {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.5 }}
                     className={classes.contactButton}
+                    onClick={handleClick}
                   >
                     Contactarme
                   </motion.button>
@@ -166,11 +172,12 @@ const useStyles = makeStyles((theme) => ({
     color: '#FFFFFF',
     fontSize: '1.2rem',
     lineHeight: '1.6',
+    fontWeight: '200', 
     fontFamily: 'Space Grotesk, sans-serif',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1rem',
+      fontSize: '0.9rem', // Letra más delgada
       textAlign: 'left',
-      fontWeight: '400',
+      fontWeight: '300', // Elegante
     },
   },
   buttonContainer: {

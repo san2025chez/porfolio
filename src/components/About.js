@@ -100,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '50px',
     fontFamily: 'Open Sans, sans-serif',
     [theme.breakpoints.down('sm')]: {
-      paddingTop: '80px',
+      paddingTop: '40px',
     },
   },
   sectioncontent: {

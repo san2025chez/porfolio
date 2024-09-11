@@ -23,8 +23,8 @@ function App() {
         <About title="Inicio" id="about" />
         <Skills title="Sobre Mi" id="skill" dark={"#00BFA5"} />
         <MyWork title="Trabajos" id="work" dark={false} />
-{/*         <Services title="Servicios" id="servic" dark={false} />
- */}        <ContactForm title="Contactos" id="contact" dark={true} />
+         <Services title="Servicios" id="servic" dark={false} />
+   <ContactForm title="Contactos" id="contact" dark={true} />
         <Contact />
       </div>
     </>

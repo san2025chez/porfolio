@@ -27,7 +27,7 @@ const links = [
         icon: <BuildTwoToneIcon fontSize="medium" />
     },
     {
-        id: "service",
+        id: "servic",
         text: "Servicios",
         icon: <BuildTwoToneIcon fontSize="medium" />
     },

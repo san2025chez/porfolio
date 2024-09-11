@@ -181,7 +181,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   buttonContainer: {
-    marginTop: '30px',
+    marginTop: '50px',
     textAlign: 'center',
   },
   contactButton: {

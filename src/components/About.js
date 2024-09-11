@@ -99,12 +99,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#1E2A38",
     paddingTop: '50px',
     fontFamily: 'Open Sans, sans-serif',
+    textAlign: 'center',
+
     [theme.breakpoints.down('sm')]: {
       paddingTop: '40px',
+      paddingLeft: '0px',
+      paddingRight: '0px',
+  
     },
   },
   sectioncontent: {
-    maxWidth: "90vw",
+    maxWidth: "1200px",
     margin: "0 auto",
     padding: '0 16px',
     [theme.breakpoints.down('sm')]: {
@@ -116,8 +121,8 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '40px',
     [theme.breakpoints.down('sm')]: {
       marginTop: '20px',
-      marginBottom: '30px',
-      paddingBottom: '30px',
+     
+    
       paddingTop: '20px',
       textAlign: 'left',
     },
@@ -175,7 +180,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '200', 
     fontFamily: 'Space Grotesk, sans-serif',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '0.9rem', // Letra más delgada
+      fontSize: '1.0rem', // Letra más delgada
       textAlign: 'left',
       fontWeight: '300', // Elegante
     },
@@ -204,6 +209,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
       width: '100%',
+      marginTop:'5px'
     },
   },
   media: {

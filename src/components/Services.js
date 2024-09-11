@@ -14,6 +14,12 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(4),
     backgroundColor: '#1E2A38',
     color: '#FFFFFF',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center', // Centra horizontalmente el contenido
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(2),
+    },
   },
   title: {
     textAlign: 'center',
@@ -31,10 +37,11 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Space Grotesk, sans-serif',
     textTransform: 'uppercase',
   },
-  grid: {
-    [theme.breakpoints.down('xs')]: {
-      margin: '0',
-    },
+  gridContainer: {
+    maxWidth: '1200px', // Establece un ancho máximo para mantener el contenido centrado
+    width: '100%',
+    padding: '0 16px', // Padding horizontal para espacios simétricos
+    margin: '0 auto', // Centra el contenedor de la cuadrícula
   },
   cardContainer: {
     padding: '8px',
@@ -126,30 +133,32 @@ export const Services = ({ title, id }) => {
       <Typography variant="h5" className={classes.title}>
         {title || 'SERVICIOS'}
       </Typography>
-      <Grid container spacing={3} className={classes.grid}>
-        {services.map((service, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index} className={classes.cardContainer}>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-              onClick={() => handleOpen(service)}
-            >
-              <CardStyled>
-                <CardContent>
-                  <IconStyled>{service.icon}</IconStyled>
-                  <Typography variant="h5" className={classes.titles}>
-                    {service.title}
-                  </Typography>
-                  <Description>
-                    {service.description}
-                  </Description>
-                </CardContent>
-              </CardStyled>
-            </motion.div>
-          </Grid>
-        ))}
-      </Grid>
+      <div className={classes.gridContainer}>
+        <Grid container spacing={3}>
+          {services.map((service, index) => (
+            <Grid item xs={12} sm={6} md={3} key={index} className={classes.cardContainer}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.3 }}
+                onClick={() => handleOpen(service)}
+              >
+                <CardStyled>
+                  <CardContent>
+                    <IconStyled>{service.icon}</IconStyled>
+                    <Typography variant="h5" className={classes.titles}>
+                      {service.title}
+                    </Typography>
+                    <Description>
+                      {service.description}
+                    </Description>
+                  </CardContent>
+                </CardStyled>
+              </motion.div>
+            </Grid>
+          ))}
+        </Grid>
+      </div>
       {selectedService && (
         <Dialog
           open={open}

@@ -1,4 +1,3 @@
-// MyWork.js
 import React, { useState } from 'react';
 import { makeStyles, Grid, Typography, Dialog, DialogContent, IconButton } from '@material-ui/core';
 import ProjectCard from './ProjectCard';
@@ -25,18 +24,20 @@ const MyWork = ({ title, id }) => {
       <Typography variant="h5" className={classes.title}>
         {title}
       </Typography>
-      <Grid container spacing={3} className={classes.grid}>
-        {mockData.map((project, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <ProjectCard
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              onOpen={() => handleOpen(project)}
-            />
-          </Grid>
-        ))}
-      </Grid>
+      <div className={classes.gridContainer}>
+        <Grid container spacing={3}>
+          {mockData.map((project, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                onOpen={() => handleOpen(project)}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </div>
       <Dialog
         open={open}
         onClose={handleClose}
@@ -69,18 +70,28 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(4),
     backgroundColor: '#1E2A38',
     color: '#FFFFFF',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center', // Centra el contenido horizontalmente
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(2),
+    },
   },
   title: {
     textAlign: 'center',
     fontWeight: 'bold',
     marginBottom: theme.spacing(4),
     fontSize: '2rem',
-    fontFamily: 'Space Grotesk, sans-serif', // Aplica la fuente a todos las letras
-    textTransform: 'uppercase', // Convierte la primera letra de cada palabra a mayúscula
+    fontFamily: 'Space Grotesk, sans-serif',
+    textTransform: 'uppercase',
   },
-  grid: {
-    [theme.breakpoints.down('xs')]: {
-      margin: '0',
+  gridContainer: {
+    maxWidth: '1200px', // Establece un ancho máximo para centrar la cuadrícula
+    width: '100%',
+    padding: '0 16px', // Padding horizontal
+    margin: '0 auto', // Centra el contenedor de la cuadrícula
+    [theme.breakpoints.down('sm')]: {
+      padding: '0 8px',
     },
   },
   dialog: {

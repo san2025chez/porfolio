@@ -219,7 +219,7 @@ const useStyles = makeStyles((theme) => ({
     objectFit: 'cover',
     borderRadius: "10px",
     [theme.breakpoints.down('sm')]: {
-      height: '300px',
+      height: '400px',
       maxHeight: '600px',
       width: '100%',
     },

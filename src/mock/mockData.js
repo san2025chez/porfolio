@@ -4,11 +4,12 @@ import dash from "../img/dash.jpeg"
 import personales from "../img/personales.jpeg"
 import dashcommerce from "../img/dashcommerce.png"
 import ada from "../img/newada.png"
+import medico from "../img/sistemamedico.png"
 const mockData=[
     {
         title: "Prestamos Personales",
         image: personales ,
-        description:'Sistema de Registros de prestamos personales.Tecnologias utilizadas: React-Node-Nest-postgres ',
+        description:'Sistema de Registros de prestamos personales.Tecnologias utilizadas: React-JS-Material UI',
         link:"https://san2025chez.github.io/landingprestamos/"
     },
     {
@@ -29,6 +30,13 @@ const mockData=[
     {
         title: "Ada Software",
         image: ada ,
+        link:"https://adasoft.com.ar/"
+    },
+    {
+        title: "Sistema de Fisioterapia",
+        image: medico ,
+        description:'Sistema de Fisiterapia.Tecnologias utilizadas: HTML-CSS-JS',
+
         link:"https://adasoft.com.ar/"
     }
 ]

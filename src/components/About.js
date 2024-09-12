@@ -74,7 +74,7 @@ const About = ({ title, dark, id }) => {
                     className={classes.contactButton}
                     onClick={handleClick}
                   >
-                    Contactarme
+                    CONTACTARME
                   </motion.button>
                 </div>
               </Grid>
@@ -117,13 +117,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   textContainer: {
-    marginTop: '50px',
-    paddingTop: '40px',
+    marginTop: '60px',
+  
     [theme.breakpoints.down('sm')]: {
-      marginTop: '20px',
+      marginTop: '40px',
      
     
-      paddingTop: '20px',
+      paddingTop: '30px',
       textAlign: 'left',
     },
   },
@@ -167,13 +167,13 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '20px',
     fontFamily: 'Space Grotesk, sans-serif',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1.8rem',
+      fontSize: '2rem',
       textAlign: 'left',
       fontWeight: '500',
     },
   },
   description: {
-    marginTop: '30px',
+    marginTop: '20px',
     color: '#FFFFFF',
     fontSize: '1.2rem',
     lineHeight: '1.6',
@@ -182,12 +182,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.0rem', // Letra más delgada
       textAlign: 'left',
-      fontWeight: '300', // Elegante
+      fontWeight: '200', // Elegante
     },
   },
   buttonContainer: {
-    marginTop: '50px',
+    marginTop: '70px',
     textAlign: 'center',
+    marginBottom:'10px',
+ 
   },
   contactButton: {
     color: '#FFFFFF',
@@ -198,6 +200,7 @@ const useStyles = makeStyles((theme) => ({
     border: 'none',
     cursor: 'pointer',
     transition: 'background-color 0.3s, transform 0.2s',
+  
     '&:hover': {
       backgroundColor: '#007ACC',
     },
@@ -208,18 +211,20 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
-      width: '100%',
-      marginTop:'5px'
+      width: '90%',
+      marginTop:'0px',
+      paddingBottom:'0px',
+      marginBottom:'0px'
     },
   },
   media: {
-    width: '80%',
+    width: '90%',
     height: 'auto',
     maxHeight: '600px',
     objectFit: 'cover',
     borderRadius: "10px",
     [theme.breakpoints.down('sm')]: {
-      height: '400px',
+      height: '500px',
       maxHeight: '600px',
       width: '100%',
     },

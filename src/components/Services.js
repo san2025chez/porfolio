@@ -141,8 +141,8 @@ export const Services = ({ title, id }) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.3 }}
-                onClick={() => handleOpen(service)}
-              >
+/*                 onClick={() => handleOpen(service)}
+ */              >
                 <CardStyled>
                   <CardContent>
                     <IconStyled>{service.icon}</IconStyled>

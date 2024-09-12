@@ -114,6 +114,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#1E2A38',
     color: '#FFFFFF',
     fontFamily: 'Space Grotesk, sans-serif',
+    border: 'none',
+    boxShadow: 'none',
+    
+
   },
   paper: {
     width: '100%',

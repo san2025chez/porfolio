@@ -48,7 +48,7 @@ export default function Technologies() {
                         }}
                     >
                     Ingeniera en Informática y 
-                      Desarrolladora Full-Stack con más de 3 años de experiencia en el desarrollo de 
+                      Desarrolladora Full-Stack con más de 4 años de experiencia en el desarrollo de 
                       sistemas y aplicaciones. Me especializo en crear soluciones innovadoras y eficientes
                        utilizando nuevas tecnologías. Mi capacidad analítica me permite resolver problemas
                         de manera efectiva, y siempre busco mejorar mis habilidades para enfrentar nuevos desafíos.

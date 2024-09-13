@@ -104,14 +104,43 @@ const Description = styled(Typography)(({ theme }) => ({
 }));
 
 const services = [
-  { title: 'Desarrollo de Aplicaciones Web', description: 'Creamos aplicaciones web innovadoras y dinámicas que proporcionan una experiencia de usuario excepcional y soluciones eficientes a tus necesidades digitales.', icon: <FaDesktop /> },
-  { title: 'Desarrollo de E-Commerce', description: 'Diseñamos y desarrollamos tiendas en línea completas que maximizan las ventas y facilitan una experiencia de compra intuitiva y segura para tus clientes.', icon: <FaShoppingCart /> },
-  { title: 'Desarrollo de Landing Pages', description: 'Creamos landing pages optimizadas que capturan leads y convierten visitantes en clientes, ayudando a alcanzar tus objetivos de marketing y ventas.', icon:  <FaDesktop />  },
-  { title: 'Mantenimiento y Soporte Técnico', description: 'Ofrecemos servicios de mantenimiento y soporte para asegurar que tus sistemas funcionen sin problemas, incluyendo actualizaciones y solución de problemas.', icon: <GiSettingsKnobs /> },
-  { title: 'Formateo e Instalación de Software', description: 'Proporcionamos servicios completos de formateo, instalación y configuración de software, asegurando que tu equipo esté listo para funcionar de manera óptima.', icon: <FaCss3Alt /> },
-  { title: 'Actualización y Optimizacion de Sistemas', description: 'Realizamos actualizaciones y optimizaciones para mejorar el rendimiento de tus sistemas, garantizando que estén al día con las últimas características y correcciones de seguridad.', icon: <SiTypescript /> },
-  { title: 'Consultoría en Arquitectura de Software', description: 'Ofrecemos asesoramiento experto para diseñar arquitecturas de software robustas y escalables que satisfagan tus necesidades actuales y futuras.', icon: <FaDatabase /> },
+  { 
+    title: 'Desarrollo de Aplicaciones Web', 
+    description: 'Desarrollo aplicaciones web innovadoras y dinámicas que proporcionan una experiencia de usuario excepcional y soluciones eficientes a tus necesidades digitales.', 
+    icon: <FaDesktop /> 
+  },
+  { 
+    title: 'Desarrollo de E-Commerce', 
+    description: 'Diseño y desarrollo tiendas en línea completas que maximizan las ventas y facilitan una experiencia de compra intuitiva y segura para tus clientes.', 
+    icon: <FaShoppingCart /> 
+  },
+  { 
+    title: 'Desarrollo de Landing Pages', 
+    description: 'Creo landing pages optimizadas que capturan leads y convierten visitantes en clientes, ayudando a alcanzar tus objetivos de marketing y ventas.', 
+    icon: <FaDesktop /> 
+  },
+  { 
+    title: 'Mantenimiento y Soporte Técnico', 
+    description: 'Ofrezco servicios de mantenimiento y soporte para asegurar que tus sistemas funcionen sin problemas, incluyendo actualizaciones y solución de problemas.', 
+    icon: <GiSettingsKnobs /> 
+  },
+  { 
+    title: 'Formateo e Instalación de Software', 
+    description: 'Proporciono servicios completos de formateo, instalación y configuración de software, asegurando que tu equipo esté listo para funcionar de manera óptima.', 
+    icon: <FaCss3Alt /> 
+  },
+  { 
+    title: 'Actualización y Optimización de Sistemas', 
+    description: 'Realizo actualizaciones y optimizaciones para mejorar el rendimiento de tus sistemas, garantizando que estén al día con las últimas características y correcciones de seguridad.', 
+    icon: <SiTypescript /> 
+  },
+  { 
+    title: 'Consultoría en Arquitectura de Software', 
+    description: 'Ofrezco asesoramiento experto para diseñar arquitecturas de software robustas y escalables que satisfagan tus necesidades actuales y futuras.', 
+    icon: <FaDatabase /> 
+  },
 ];
+
 
 export const Services = ({ title, id }) => {
   const classes = useStyles();

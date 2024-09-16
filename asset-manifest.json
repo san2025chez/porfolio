@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/porfolio/static/css/main.f4dc68ec.css",
-    "main.js": "/porfolio/static/js/main.237a1f32.js",
+    "main.js": "/porfolio/static/js/main.656b216a.js",
     "static/js/787.1ed0c42c.chunk.js": "/porfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/sistemamedico.png": "/porfolio/static/media/sistemamedico.770bba9f56e37154fc19.png",
     "static/media/newada.png": "/porfolio/static/media/newada.a608c91bb4b7e501b353.png",
@@ -16,11 +16,11 @@
     "static/media/node.svg": "/porfolio/static/media/node.bf8c59f1db037f897aff62fe85cc33ba.svg",
     "index.html": "/porfolio/index.html",
     "main.f4dc68ec.css.map": "/porfolio/static/css/main.f4dc68ec.css.map",
-    "main.237a1f32.js.map": "/porfolio/static/js/main.237a1f32.js.map",
+    "main.656b216a.js.map": "/porfolio/static/js/main.656b216a.js.map",
     "787.1ed0c42c.chunk.js.map": "/porfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f4dc68ec.css",
-    "static/js/main.237a1f32.js"
+    "static/js/main.656b216a.js"
   ]
 }

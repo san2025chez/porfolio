@@ -29,15 +29,15 @@ const Contact = () => {
             </a>
           </Grid>
       
-          <Grid item>
+        {/*   <Grid item>
             <a href="https://github.com/san2025chez" target="_blank" rel="noopener noreferrer">
               <IconButton className={classes.iconButton}>
                 <GitHubIcon fontSize="inherit" />
               </IconButton>
             </a>
-          </Grid>
+          </Grid> */}
           <Grid item>
-            <a href="https://t.me/yourtelegramusername" target="_blank" rel="noopener noreferrer">
+            <a href="https://t.me/Vanesa2023mar" target="_blank" rel="noopener noreferrer">
               <IconButton className={classes.iconButton}>
                 <TelegramIcon fontSize="inherit" />
               </IconButton>
